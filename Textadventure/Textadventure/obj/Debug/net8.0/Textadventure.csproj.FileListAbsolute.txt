@@ -1,0 +1,15 @@
+Y:\dev\Textadventure\Textadventure\Textadventure\bin\Debug\net8.0\Textadventure.exe
+Y:\dev\Textadventure\Textadventure\Textadventure\bin\Debug\net8.0\Textadventure.deps.json
+Y:\dev\Textadventure\Textadventure\Textadventure\bin\Debug\net8.0\Textadventure.runtimeconfig.json
+Y:\dev\Textadventure\Textadventure\Textadventure\bin\Debug\net8.0\Textadventure.dll
+Y:\dev\Textadventure\Textadventure\Textadventure\bin\Debug\net8.0\Textadventure.pdb
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\Textadventure.GeneratedMSBuildEditorConfig.editorconfig
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\Textadventure.AssemblyInfoInputs.cache
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\Textadventure.AssemblyInfo.cs
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\Textadventure.csproj.CoreCompileInputs.cache
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\Textadventure.sourcelink.json
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\Textadventure.dll
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\refint\Textadventure.dll
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\Textadventure.pdb
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\Textadventure.genruntimeconfig.cache
+Y:\dev\Textadventure\Textadventure\Textadventure\obj\Debug\net8.0\ref\Textadventure.dll
