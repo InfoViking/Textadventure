@@ -3,31 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Textadventure
 {
-    internal static class Titlescreen
+    internal static class TextContinue
     {
-        public static void StartingScreen()
+        public static void Textscroll()
         {
-            Console.WriteLine("The Way Home");
-            Console.WriteLine("Press Space to Start");
-            Console.WriteLine("Press anything to Exit");
-
             ConsoleKeyInfo start = Console.ReadKey();
             if (start.Key == ConsoleKey.Enter)
-            { 
+            {
 
             }
             else
             {
                 Environment.Exit(0);
 
-            } 
-
-
-            
+            }
         }
 
     }
