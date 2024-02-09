@@ -13,6 +13,9 @@ public static class Adventure
         Prologue.Intro();
         Console.ReadLine();
 
+        Chapter1.Beginning();
+        Console.ReadLine(); 
+
 
 
 

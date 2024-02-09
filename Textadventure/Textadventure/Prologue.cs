@@ -17,7 +17,11 @@ namespace Textadventure
         public static void Character()
         {
 
-            Player player = new Player(); 
+            Player player = new Player();
+            Console.WriteLine("Geben sie einen Namen für ihren Charakter ein.");
+            
+
+
             Console.WriteLine($"Name: {player.Name}");
             Console.WriteLine("Alter: 18.");
             Console.WriteLine("Größe: 1,74m.");
@@ -44,7 +48,7 @@ namespace Textadventure
                               "Prüfung im Wald stellen.");
             Console.ReadLine();
 
-            Console.WriteLine("Sie verbanden dir die Augen. Das letzte an das du dich erinnern kannst" +
+            Console.WriteLine("Sie verbanden dir die Augen. Das letzte an das du dich erinnern kannst " +
                 "war ein Schlag auf deinen Hinterkopf. Danach wurde alles schwarz.");
             Console.ReadLine();
 
@@ -58,9 +62,11 @@ namespace Textadventure
 
             Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine("The Other Way Home");
+            Console.ResetColor();
 
             TextContinue.Textscroll();
             Console.ReadLine();
+            Console.Clear();
 
             
 
