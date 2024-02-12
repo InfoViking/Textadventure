@@ -13,7 +13,9 @@ namespace Textadventure
        internal int Age {  get; set; }
         internal int Height {  get; set; }
         string Profession = "pupil";
-        string CharacterTraits = "shy,naive";
+
+        
+        
 
 
     }

@@ -10,6 +10,16 @@ namespace Textadventure
     {
         public static void Beginning()
         {
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.WriteLine("Der Scheideweg");
+
+            Console.ResetColor();
+            TextContinue.Textscroll();
+            Console.ReadLine();
+            Console.Clear();
+
             Console.WriteLine("Du beschließt fürs Erste dem Weg zu folgen auf dem du erwacht bist." +
                 " Nach einer Weile bemerkst du vor dir ein schwaches Leuchten. Als du dich näherst," +
                 " erkennst du die Lichtquelle. Erleichterung durchströmt deinen Körper");
@@ -51,6 +61,35 @@ namespace Textadventure
                 " der dich zu Hause erwartet." +
                 "Versuche gesund zu bleiben und sei vorsichtig");
             
+            Console.ResetColor();
+            TextContinue.Textscroll();
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("Nachdem du sich mit den Funktionen vertraut gemacht hast setzt du deinen Weg nach Hause weiter fort." +
+                "Nach einer Weile gabelt sich der Weg in zwei Richtungen. Du leuchtest mit der Taschenlampe des Handys die Wege aus.");
+
+            TextContinue.Textscroll();
+            Console.ReadLine();
+
+            Console.WriteLine("Der linke Weg scheint deutlich schlechter ausgebaut zu sein. Einige Dornenranken wuchern über den Weg" +
+                " und Schlaglöcher bergen die Gefahr bei einem falschen Schritt deinen Knöchel zu verletzen." +
+                "Der rechte Weg sieht, im Vergleich, deutlich besser aus. Allerdings bemerkst du auf dem Boden Fußspuren." +
+                "Als du sie genauer untersuchst stellst du fest, dass diese Fußspuren definitiv nicht von Menschen stammen." +
+                "Du kannst sie keinem Tier zuordnen. Je länger du sie untersuchst desto unwohler fühlst du dich.");
+
+            Console.WriteLine("Hännschen: Jeder der Wege hat seine Unsicherheiten. Aber ich muss weiter. Zurückgehen ist keine Option" +
+                "Ich entscheide mich für...");
+
+            ///decision left/right way///
+            
+
+
+
+
+           
+
+
 
 
 

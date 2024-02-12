@@ -14,7 +14,10 @@ public static class Adventure
         Console.ReadLine();
 
         Chapter1.Beginning();
-        Console.ReadLine(); 
+        Console.ReadLine();
+
+        
+        
 
 
 
@@ -22,6 +25,7 @@ public static class Adventure
 
     }
 
+    
 }
 
 
