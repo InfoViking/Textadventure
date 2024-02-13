@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-
-namespace Textadventure
+﻿namespace Textadventure
 {
     internal static class Titlescreen
     {
-        public static void StartingScreen()
+        internal static void StartingScreen()
         {
             Console.WriteLine("The Way Home");
             Console.WriteLine("Press Space to Start");
@@ -25,10 +18,6 @@ namespace Textadventure
                 Environment.Exit(0);
 
             } 
-
-
-            
         }
-
     }
 }

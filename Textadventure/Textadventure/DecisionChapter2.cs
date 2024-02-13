@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Textadventure
+﻿namespace Textadventure
 {
+    //implement CorrectWay/ WrongWay1/ WrongWay2/ WrongWay3
     internal class DecisionChapter2
     {
     }
