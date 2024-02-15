@@ -1,13 +1,19 @@
 ﻿namespace Textadventure
 {
-    internal static class Prologue
+    internal class Prologue
     {
+        Player _player;
+        public Prologue(Player player)
+        {
+            _player = player;
+        }
         /// <summary>
         /// Character informations.
         /// </summary>
-        public static void Character()
+        internal static Player Character()
         {
             Player player = new Player();
+            player.Name = "Hännschen";
 
             Console.WriteLine("Geben sie einen Namen für ihren Charakter ein.");
             Console.WriteLine($"Name: {player.Name}");
@@ -15,12 +21,13 @@
             Console.WriteLine("Größe: 1,74m.");
             Console.WriteLine("Beruf: Schüler.");
             Console.ReadLine() ;
+            return player;
         }
 
         /// <summary>
         /// Prologue text
         /// </summary>
-        public static void Intro()
+        internal void Intro()
         {
             Console.WriteLine("Du erwachst auf einem Waldweg. Es scheint tiefste Nacht zu sein.");
             Console.WriteLine("Hännschen: Wo bin ich? Was ist passiert?");

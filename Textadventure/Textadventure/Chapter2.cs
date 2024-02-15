@@ -2,6 +2,11 @@
 {
     internal class Chapter2
     {
+        Player _player;
+        public Chapter2(Player player)
+        {
+            _player = player;
+        }
         internal void Beginning()
         {
             Console.BackgroundColor = ConsoleColor.Red;
@@ -22,25 +27,105 @@
             Console.Clear();
             Console.WriteLine("Hännschen: Was für eine Barberei. Wenn ich versuche hier einfach durchzulaufen wird es mir nicht anders ergehen. ");
             Console.ReadLine();
+
+
+            if (_player.IsGoatMaster)
+            {//to do:add Storyline 
+                return;
+            }
+
+
             Console.WriteLine("Nach langem grübeln fällt dir ein Pflock auf der ein wenig abseits steht. Es scheint etwas mit einem Messer eingeritzt zu sein.");
             Console.ReadLine();
-            
-            Console.BackgroundColor= ConsoleColor.Green;
-            Console.ForegroundColor= ConsoleColor.Black;
-            
-            Console.WriteLine("Hinweis: Die nächste Nachricht wird dir nur einmal angezeigt. Präge dir gut ein was dort steht. Falls nicht wird es schmerzhaft.");
+            Console.WriteLine("Start 2xV, 1xR, 2xV, 2xL, 3xV ");
+            Console.ReadLine();
+
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.WriteLine("Hinweis: Die Nachricht wird dir nur einmal angezeigt. Präge dir gut ein was dort steht. Falls nicht wird es schmerzhaft." +
+                "Steuerung: Pfeiltaste links = links " +
+                           "Pfeiltaste rechts = rechts " +
+                           "Pfeiltaste hoch = vorwärts ");
             Console.ResetColor();
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Start 2xV, 1xR, 2xV, 2xL, 3xV ");
+            Console.WriteLine("Nachdem du dir die Nachricht ausgiebig eingeprägt hast setzt du deinen Weg fort. ");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Nachdem du dir die Nachricht ausgiebig eingeprägt hast setzt du deinen Weg fort. "); 
-            Console.ReadLine();
-            Console.Clear();
-            
+
+            List<ConsoleKey> pressedkeys = GetLabyrinthKeys();
+            List<ConsoleKey> correctkeys = CorrectLabyrinthKeys();
+            int multiplier = CountFailures(pressedkeys,correctkeys);
+            int calculator = DamageCalculator(multiplier);
+            Wrongchoices(multiplier, calculator)
 
 
         }
+
+
+
+        internal List<ConsoleKey> GetLabyrinthKeys()
+        {
+            List<ConsoleKey> pressedkeys = new List<ConsoleKey>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                ConsoleKeyInfo keypressed = Console.ReadKey();
+
+                pressedkeys.Add(keypressed.Key);
+            }
+            return pressedkeys;
+        }
+
+       
+        internal List<ConsoleKey> CorrectLabyrinthKeys()
+        { //Correct Inputs: 2xV, 1xR, 2xV, 2xL, 3xV
+
+            List<ConsoleKey> correctkeys = new List<ConsoleKey>();
+            correctkeys.Add(ConsoleKey.UpArrow);
+            correctkeys.Add(ConsoleKey.UpArrow);
+            correctkeys.Add(ConsoleKey.RightArrow);
+            correctkeys.Add(ConsoleKey.UpArrow);
+            correctkeys.Add(ConsoleKey.UpArrow);
+            correctkeys.Add(ConsoleKey.LeftArrow);
+            correctkeys.Add(ConsoleKey.LeftArrow);
+            correctkeys.Add(ConsoleKey.UpArrow);
+            correctkeys.Add(ConsoleKey.UpArrow);
+            correctkeys.Add(ConsoleKey.UpArrow);
+
+            return correctkeys;
+        }
+
+        internal int CountFailures(List<ConsoleKey> userInput, List<ConsoleKey> correctInput)
+        {
+            int multiplier = 0;
+
+            for (int i = 0; i < 10; i++)
+            { 
+                if (userInput[i] != correctInput[i])
+                {
+                    multiplier++;
+                }
+            }
+
+            return multiplier;
+
+        }
+
+        internal int DamageCalculator(int multiplier, int damage = 2)
+        {
+            int damageMultiplier = multiplier * damage;
+
+            return damageMultiplier;
+        } 
+        
+        internal void Wrongchoices(int multiplier, int damageMultiplier)
+        {
+            Console.WriteLine($@"Dein überragender Intellekt ließ dich {multiplier} mal im Stich.
+                                 Du erhälst {damageMultiplier} Schaden");
+        }
+        
     }
+    
 }

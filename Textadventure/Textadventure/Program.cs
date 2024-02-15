@@ -7,20 +7,23 @@ public static class Adventure
         Titlescreen.StartingScreen();
         Console.ReadLine();
 
-        Prologue.Character();
+        Player player = Prologue.Character();
         Console.ReadLine();
 
-        Prologue.Intro();
-        Console.ReadLine();
+        Prologue prologue = new Prologue(player);
+        prologue.Intro();
 
-        Chapter1.Beginning();
-        Console.ReadLine();
+        Chapter1 chapter1 = new Chapter1(player);
+        chapter1.Beginning();
+
+        Chapter2 chapter2 = new Chapter2(player);
+        chapter2.Beginning();
         
-        Player player = new Player();
-        player.Name = "Hännschen";
+
         
-        DecisionChapter1 decisionChapter1 = new DecisionChapter1(player);
-        decisionChapter1.Decision();
+        
+        
+        
 
 
     }

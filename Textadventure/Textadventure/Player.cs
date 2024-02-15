@@ -6,7 +6,12 @@
        internal string Name {  get; set; }
        internal int Age {  get; set; }
         internal int Height {  get; set; }
-        string Profession = "pupil";
+        internal bool IsGoatMaster { get; set; } = false;
+        
+
+        
+        
+
 
         internal Player()
         {
@@ -27,6 +32,8 @@
             } 
             
         }
+
+        
         
 
 
