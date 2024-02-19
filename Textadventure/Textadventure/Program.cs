@@ -18,6 +18,9 @@ public static class Adventure
 
         Chapter2 chapter2 = new Chapter2(player);
         chapter2.Beginning();
+
+        Chapter3 chapter3 = new Chapter3(player);
+        chapter3.Beginning();
         
 
         

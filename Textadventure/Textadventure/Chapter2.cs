@@ -30,7 +30,16 @@
 
 
             if (_player.IsGoatMaster)
-            {//to do:add Storyline 
+            {//to do:add Storyline
+                Console.WriteLine("Dein neuer Begleiter schreitet unbeirrt voran. Nach ein paar Metern dreht er sich zu dir um und scheint auf dich zu warten." +
+                    "Offenbar möchte die Ziege, dass du ihr folgst." +
+                    "Hännschen: Ich lege mein Leben in die Hände einer Ziege. Vielleicht sollte ich meinen Kopf untersuchen lassen." +
+                    "Du folgst deinem Begleiter durch das Feld aus Fallen. Und tatsächlich scheint die Ziege zu wissen was sie tut." +
+                    "Du kommst unbeschadet auf der anderen Seite des Hains an." +
+                    "Die Ziege entdeckt einen Strauch mit Heidelbeeren und macht sich direkt darüber her." +
+                    "Sie macht keine Anstalten dir weiterhin folgen zu wollen" +
+                    "Schweren Herzens setzt du deine Reise alleine fort");
+
                 return;
             }
 
@@ -58,9 +67,15 @@
             List<ConsoleKey> correctkeys = CorrectLabyrinthKeys();
             int multiplier = CountFailures(pressedkeys,correctkeys);
             int calculator = DamageCalculator(multiplier);
-            Wrongchoices(multiplier, calculator)
-
-
+            
+            if (multiplier > 0)
+            {
+                Wrongchoices(multiplier, calculator);
+            }
+            else
+            {
+                Rightchoices();
+            }
         }
 
 
@@ -120,11 +135,20 @@
             return damageMultiplier;
         } 
         
-        internal void Wrongchoices(int multiplier, int damageMultiplier)
+        internal void Wrongchoices(int multiplier, int damage)
         {
             Console.WriteLine($@"Dein überragender Intellekt ließ dich {multiplier} mal im Stich.
-                                 Du erhälst {damageMultiplier} Schaden");
+                                 Du erhälst {damage} Schaden. Angeschlagen setzt du deine Reise weiter fort.");
+
+
         }
+        
+        internal void Rightchoices()
+        {
+            Console.WriteLine("Dein überragender Intellekt sorgte dafür, dass du in der Lage warst, das Labyrinth unbeschadet zu durchqueren. " +
+                "Du setzt deine Reise weiter fort.");
+        }
+
         
     }
     

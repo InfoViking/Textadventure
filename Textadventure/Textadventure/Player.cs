@@ -33,8 +33,25 @@
             
         }
 
-        
-        
+        internal void Rest(int healingRest = 5)
+        {
+            CalculateHealthpoints(healingRest);
+            Console.WriteLine($"Die Rast tat deinen müden Knochen gut. Du regeneriest {healingRest} Healthpoints ");
+
+
+        }
+
+        internal void DrinkEnergy(int healingDrink = 15)
+        {
+            CalculateHealthpoints(healingDrink);
+            Console.WriteLine($"Der Energydrink läuft deine Kehle hinunter. Du spürst wie er deinen Körper und Geist belebt. " +
+                              $"Du regenerierst {healingDrink} Healthpoints ");
+
+
+        }
+
+
+
 
 
     }
