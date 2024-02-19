@@ -13,7 +13,7 @@
         internal static Player Character()
         {
             Player player = new Player();
-            player.Name = "Hännschen";
+            player.Name = $"{_player.Name}";
 
             Console.WriteLine("Geben sie einen Namen für ihren Charakter ein.");
             Console.WriteLine($"Name: {player.Name}");
@@ -30,7 +30,7 @@
         internal void Intro()
         {
             Console.WriteLine("Du erwachst auf einem Waldweg. Es scheint tiefste Nacht zu sein.");
-            Console.WriteLine("Hännschen: Wo bin ich? Was ist passiert?");
+            Console.WriteLine($"{_player.Name}: Wo bin ich? Was ist passiert?");
             Console.ReadLine();
             Console.WriteLine("Deine Erinnerung kehrt langsam zu dir zurück... ");
             Console.WriteLine("Du wurdest nach der Schule von den (coolen) Kids abgefangen." +
@@ -41,9 +41,9 @@
                 "war ein Schlag auf deinen Hinterkopf. Danach wurde alles schwarz.");
             Console.ReadLine();
             Console.WriteLine("Du prüfst deine Taschen und deinen Rucksack.");
-            Console.WriteLine("Hännschen: Diese miesen,verlogenen...");
+            Console.WriteLine($"{_player.Name}: Diese miesen,verlogenen...");
             Console.WriteLine("Selbst deine Schulbücher waren weg. Nur der Energydrink in der Seitentasche war noch da.");
-            Console.WriteLine("Hännschen: Ich muss nach Hause. Meine Eltern sind bestimmt krank vor Sorge ");
+            Console.WriteLine($"{_player.Name}: Ich muss nach Hause. Meine Eltern sind bestimmt krank vor Sorge ");
             Console.WriteLine("Und so begann dein außergewöhnlicher Weg nach Hause");
             Console.ReadLine();
             Console.Clear();

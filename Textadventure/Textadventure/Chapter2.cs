@@ -25,15 +25,15 @@
                 "dass eine Bande Wilderer in diesem Wald ihr Unwesen treibt.");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Hännschen: Was für eine Barberei. Wenn ich versuche hier einfach durchzulaufen wird es mir nicht anders ergehen. ");
+            Console.WriteLine($"{_player.Name}: Was für eine Barberei. Wenn ich versuche hier einfach durchzulaufen wird es mir nicht anders ergehen. ");
             Console.ReadLine();
 
 
             if (_player.IsGoatMaster)
-            {//to do:add Storyline
+            {
                 Console.WriteLine("Dein neuer Begleiter schreitet unbeirrt voran. Nach ein paar Metern dreht er sich zu dir um und scheint auf dich zu warten." +
                     "Offenbar möchte die Ziege, dass du ihr folgst." +
-                    "Hännschen: Ich lege mein Leben in die Hände einer Ziege. Vielleicht sollte ich meinen Kopf untersuchen lassen." +
+                    $"{_player.Name}: Ich lege mein Leben in die Hände einer Ziege. Vielleicht sollte ich meinen Kopf untersuchen lassen." +
                     "Du folgst deinem Begleiter durch das Feld aus Fallen. Und tatsächlich scheint die Ziege zu wissen was sie tut." +
                     "Du kommst unbeschadet auf der anderen Seite des Hains an." +
                     "Die Ziege entdeckt einen Strauch mit Heidelbeeren und macht sich direkt darüber her." +
@@ -87,6 +87,7 @@
             for (int i = 0; i < 10; i++)
             {
                 ConsoleKeyInfo keypressed = Console.ReadKey();
+                Console.WriteLine($"{keypressed.Key}");
 
                 pressedkeys.Add(keypressed.Key);
             }

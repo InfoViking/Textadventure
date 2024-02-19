@@ -20,14 +20,14 @@
                 " Nach einer Weile bemerkst du vor dir ein schwaches Leuchten. Als du dich näherst," +
                 " erkennst du die Lichtquelle. Erleichterung durchströmt deinen Körper");
             Console.ReadLine();
-            Console.WriteLine("Hännschen: Ein Handy! Ich bin gerettet!");
+            Console.WriteLine($"{_player.Name}: Ein Handy! Ich bin gerettet!");
             Console.ReadLine();
             Console.WriteLine("Du schaltest das Handy ein und deine Hoffnung verfliegt so schnell," +
                 " wie sie gekommen war." +
                 "Kein Empfang. Nicht einmal Notrufe sind verfügbar. Jedoch bemerkst du etwas merkwürdiges." +
                 "Es befindet sich nur eine einzige App auf dem Handy.");
             Console.ReadLine();
-            Console.WriteLine("Hännschen: MediServApp. Mh. Das ist doch diese großartige Bank für" +
+            Console.WriteLine($"{_player.Name}: MediServApp. Mh. Das ist doch diese großartige Bank für" +
                 " medizinische Transaktionen." +
                 "Bekannt aus Funk und Fernsehen und dazu noch weltweit geschätzt und anerkannt. ");
             Console.ReadLine();
@@ -60,71 +60,78 @@
 
         internal void Decision()
         {
-            Console.WriteLine("Hännschen: Jeder der Wege hat seine Unsicherheiten. Aber ich muss weiter. Zurückgehen ist keine Option" +
+            Console.WriteLine($"{_player.Name}: Jeder der Wege hat seine Unsicherheiten. Aber ich muss weiter. Zurückgehen ist keine Option " +
                 "Ich entscheide mich für..." +
                 "1 = Linker Weg" +
                 "2 = Rechter Weg");
 
             bool isCorrectInput = false;
 
+            
             while (isCorrectInput == false)
             {
-                int choice = Convert.ToInt32(Console.ReadLine());
+                string choice = Console.ReadLine();
+                int convertedChoice = 0;
 
-                if (choice == 1)
+                    if (!int.TryParse(choice, out convertedChoice))
+                    {
+                        Console.WriteLine("Bitte nutzen sie die vorgegebenen Eingabetasten.");
+                        Console.ReadLine();
+                        Console.Clear();
+
+                        continue;
+                    }
+                
+                 if (convertedChoice == 1)
                 {
                     Leftway();
                     isCorrectInput = true;
                 }
-                else if (choice == 2)
+                else if (convertedChoice == 2)
                 {
                     Rightway();
                     isCorrectInput = true;
                 }
-                else
-                {
-                    Console.WriteLine("Bitte nutzen sie die vorgegebenen Eingabetasten.");
-                    Console.ReadLine();
-                    Console.Clear ();
-                }
+              
             }
         }
 
 
         internal void Leftway()
         {
-            Console.WriteLine("Hännschen: Diese Tierspuren sind mir nicht geheuer. Ich lege mich lieber mit ein paar Dornen und Schlaglöchern an als mit einer wilden Bestie." +
+            Console.WriteLine($"{_player.Name}: Diese Tierspuren sind mir nicht geheuer. Ich lege mich lieber mit ein paar Dornen und Schlaglöchern an als mit einer wilden Bestie. " +
                 "Du setzt deine Reise auf dem linken Pfad fort.");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Und es kam wie es kommen musste. Nach einem Moment der Unachtsamkeit trittst du ins Leere und fällst mit dem Gesicht vorran in einen Dornenbusch." +
-                "Du spürst wie die Dornen sich in deine Haut arbeiten und kleine Kratzer hinterlassen. Außerdem spürst du einen leichten Schmerz in deinem linken Knöchel." +
+            Console.WriteLine("Und es kam wie es kommen musste. Nach einem Moment der Unachtsamkeit trittst du ins Leere und fällst mit dem Gesicht vorran in einen Dornenbusch. " +
+                "Du spürst wie die Dornen sich in deine Haut arbeiten und kleine Kratzer hinterlassen. Außerdem spürst du einen leichten Schmerz in deinem linken Knöchel. " +
                 "Du bekommst 5 Schaden");
 
             _player.CalculateHealthpoints(-5);
 
             Console.WriteLine("Während du dich aufrichtest schießen dir sämtliche Flüche die du kennst durch den Kopf. " +
-                "Du klopfst dir den Schmutz vom Körper und schreitest weiter vorran.");
+                "Du klopfst dir den Schmutz vom Körper und schreitest weiter vorran. ");
             Console.ReadLine();
             Console.Clear();
         }
 
         internal void Rightway()
         {
-            Console.WriteLine("Hännschen: Die Chance mich auf dem linken Weg zu verletzen scheint recht hoch... zwar jagt mir der Gedanke an das Tier Angst ein, jedoch komme ich auf dem rechten Pfad schneller vorwärts." +
+            Console.WriteLine($"{_player.Name}: Die Chance mich auf dem linken Weg zu verletzen scheint recht hoch... zwar jagt mir der Gedanke an das Tier Angst ein, jedoch komme ich auf dem rechten Pfad schneller vorwärts." +
                 "Du setzt deine Reise auf dem rechten Pfad fort");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Während du den Weg beschreitest macht sich Paranoia in dir breit. Jedes Geräusch lässt dich zusammen zucken. " +
-                "Du spürst wie dich jemand oder etwas beobachtet. Plötzlich springt etwas vor dir aus dem Gebüsch.");
+                "Du spürst wie dich jemand oder etwas beobachtet. Plötzlich springt etwas vor dir aus dem Gebüsch. ");
             Console.ReadLine();
             Console.WriteLine("Panisch reißt du die Taschenlampe deines Handys hoch und richtest sie auf das Biest. Du starst direkt in die Augen eines Ziegenbocks. " +
-                "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist. Andererseits schwingt auch ein wenig Ärger mit da es eine Ziege geschafft hat dir Todesangst einzujagen");
+                "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist. Andererseits schwingt auch ein wenig Ärger mit da es eine Ziege geschafft hat dir Todesangst einzujagen ");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Du entscheidest dich den Ziegenbock zu...");
-            Console.WriteLine("1 = Streicheln" +
-                              "2 = Verjagen");
+            Console.WriteLine("Du entscheidest dich den Ziegenbock zu..." +
+                "1 = Streicheln " +
+                "2 = Verjagen);");
+            
 
 
             bool isCorrectInput = false;
@@ -158,7 +165,7 @@
                 "Du streichselst ihm über den Kopf, was er mit einem fröhlichen Määääh quitiert. Als du dich aufrichtest und weiter gehen willst scheint " +
                 "es als würde der Ziegenbock dir folgen");
             Console.ReadLine();
-            Console.WriteLine("Hännschen: Scheinst wohl auch von hier weg zu wollen. Mir solls Recht sein. Ein bisschen Gesellschaft tut uns beiden gut.");
+            Console.WriteLine($"{_player.Name}: Scheinst wohl auch von hier weg zu wollen. Mir solls Recht sein. Ein bisschen Gesellschaft tut uns beiden gut.");
 
             Console.BackgroundColor = ConsoleColor.Yellow;
             Console.ForegroundColor = ConsoleColor.Black;
