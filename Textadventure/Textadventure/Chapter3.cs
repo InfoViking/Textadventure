@@ -35,6 +35,10 @@ namespace Textadventure
                 "1 = Rasten (5HP)" +
                 "2 = Energydrink trinken (15HP)");
 
+            Console.ResetColor();
+            Console.ReadLine();
+            Console.Clear();
+
         }
 
         internal void RestOrDrink(Player player)
@@ -100,17 +104,24 @@ namespace Textadventure
 
             Console.ReadLine();
             Console.Clear();
-
-
-
-
-
-
         }
 
+        internal void BattleTalk()
+        {
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
 
+            Console.WriteLine("Hinweis: Nun ist es an der Zeit dein lyrisches Talent abzurufen. In folgendem Dialog gilt es die richtige Antwort auf die Kommentare des Wilderers zu finden. Jede falsche Antwort kostet dich HP3 Healthpoints." +
+                "Tipp: Die richtige Antwort passt inhaltlich zur Aussage des Wilderers.");
+
+            Console.ReadLine();
+            Console.Clear();
+            Console.ResetColor();
+
+            
+        }
+
+        
     }
 
-    
-    
 }

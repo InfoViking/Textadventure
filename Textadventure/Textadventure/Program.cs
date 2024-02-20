@@ -21,6 +21,13 @@ public static class Adventure
 
         Chapter3 chapter3 = new Chapter3(player);
         chapter3.Beginning();
+        chapter3.Camp();
+
+        Battle battle = new Battle(player);
+        battle.battleDialogue1();
+        battle.battleDialogue2();
+        battle.battleDialogue3();
+        battle.battleDialogue4();
         
 
         

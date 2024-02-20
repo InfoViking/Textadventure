@@ -19,7 +19,7 @@
         }
 
         internal void CalculateHealthpoints(int healthpointsDifference )
-        {
+        {//to do: Game Over Screen
             HealthPoints += healthpointsDifference;
             
             if ( HealthPoints < 0 )
@@ -30,6 +30,13 @@
             {
                 HealthPoints = 20;
             } 
+            else if ( HealthPoints <= 0)
+            {
+                Console.WriteLine("GAME OVER");
+                Console.ReadLine();
+                Titlescreen.StartingScreen();
+
+            }
             
         }
 
