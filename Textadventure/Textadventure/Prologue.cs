@@ -1,4 +1,8 @@
-﻿namespace Textadventure
+﻿using System;
+using System.ComponentModel.Design;
+using System.Reflection.Metadata.Ecma335;
+
+namespace Textadventure
 {
     internal class Prologue
     {
@@ -13,15 +17,25 @@
         internal static Player Character()
         {
             Player player = new Player();
-            player.Name = $"{_player.Name}";
+            Console.WriteLine("Bitte geben sie einen Namen für ihren Charakter ein");
+            string name = Console.ReadLine();
 
-            Console.WriteLine("Geben sie einen Namen für ihren Charakter ein.");
+            while (string.IsNullOrEmpty(name))
+            {
+                Console.WriteLine("Fehlermeldung 418: Es muss ein Name eingetragen werden.");
+                Console.WriteLine("Geben sie einen Namen für ihren Charakter ein.");
+                name = Console.ReadLine();
+            }
+
+            player.Name = name;
             Console.WriteLine($"Name: {player.Name}");
             Console.WriteLine("Alter: 18.");
             Console.WriteLine("Größe: 1,74m.");
             Console.WriteLine("Beruf: Schüler.");
-            Console.ReadLine() ;
+            Console.ReadLine();
+
             return player;
+
         }
 
         /// <summary>

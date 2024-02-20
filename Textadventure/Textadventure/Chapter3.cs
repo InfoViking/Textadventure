@@ -95,7 +95,7 @@ namespace Textadventure
 
             Console.WriteLine(@$"{_player.Name}: Sind sie verantwortlich für das Massaker auf dem Hain?
                                  Wilderer: Ja das bin ich. Hast du ein Problem damit, Knirps? 
-                                Hännschen: Welchen Minderwertigkeitskomplex versuchst du damit zu kompensieren?
+                                {_player.Name}: Welchen Minderwertigkeitskomplex versuchst du damit zu kompensieren?
                                 Und damit beginnt das Wortgefecht.");
 
             Console.ReadLine();
