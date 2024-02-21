@@ -24,10 +24,11 @@ public static class Adventure
         chapter3.Camp();
 
         Battle battle = new Battle(player);
-        battle.battleDialogue1();
-        battle.battleDialogue2();
-        battle.battleDialogue3();
-        battle.battleDialogue4();
+        battle.BattleDialogue1();
+        battle.BattleDialogue2();
+        battle.BattleDialogue3();
+        battle.BattleDialogue4();
+        battle.Dialogueresult();
         
 
         

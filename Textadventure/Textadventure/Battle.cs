@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Textadventure
+﻿namespace Textadventure
 {
     internal class Battle
     {
@@ -13,12 +7,12 @@ namespace Textadventure
         {
             _player = player;
         }
-        public void battleDialogue1()
+        public void BattleDialogue1()
         {
-            Console.WriteLine("Wilderer: Du bist wohl Lebensmüde?!");
-            Console.WriteLine("1 = Jetzt, wo ich dich sehe, fällt mir ein, dass ich noch den Müll rausbringen muss." +
-                              "2 = Wenn ich mich umbringen wollte, würde ich dein Ego erklimmen und zu deinem IQ springen." +
-                              "3 = Ganz unbrauchbar bist du nicht, man kann dich immer noch als schlechtes Beispiel benutzen");
+            Console.WriteLine("Wilderer: Du bist wohl Lebensmüde?!\n");
+            Console.WriteLine("1 = Jetzt, wo ich dich sehe, fällt mir ein, dass ich noch den Müll rausbringen muss. \n" +
+                              "2 = Wenn ich mich umbringen wollte, würde ich dein Ego erklimmen und zu deinem IQ springen. \n" +
+                              "3 = Ganz unbrauchbar bist du nicht, man kann dich immer noch als schlechtes Beispiel benutzen \n");
 
             bool isCorrectInput = false;
 
@@ -42,10 +36,9 @@ namespace Textadventure
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Jetzt, wo ich dich sehe, fällt mir ein, dass ich noch den Müll rausbringen muss.");
-                    _player.CalculateHealthpoints(-5);
                     Console.ReadLine();
                     Console.ResetColor();
-                    
+
                     isCorrectInput = true;
                 }
                 else if (convertedChoice == 2)
@@ -53,6 +46,7 @@ namespace Textadventure
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Wenn ich mich umbringen wollte, würde ich dein Ego erklimmen und zu deinem IQ springen.");
+                    _player.CalculateDialoguepoints(+5);
                     Console.ReadLine();
                     Console.ResetColor();
                     isCorrectInput = true;
@@ -63,7 +57,6 @@ namespace Textadventure
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Ganz unbrauchbar bist du nicht, man kann dich immer noch als schlechtes Beispiel benutzen.");
                     Console.ReadLine();
-                    _player.CalculateHealthpoints(-5);
                     Console.ResetColor();
                     isCorrectInput = true;
                 }
@@ -72,12 +65,12 @@ namespace Textadventure
             Console.Clear();
         }
 
-        public void battleDialogue2()
+        public void BattleDialogue2()
         {
-            Console.WriteLine("Wilderer: Wir schützen die Menschen vor den bösartigen Tieren des Waldes."); 
-            Console.WriteLine("1 = Du bist wie eine Wolke. Wenn du verschwindest, wird es ein schöner Tag." +
-                              "2 = Du bist so enttäuschend wie eine ungesalzene Brezel." +
-                              "3 = Die wahren Helden sind die Menschen, die dich jeden Tag tolerieren müssen.");
+            Console.WriteLine("Wilderer: Wir schützen die Menschen vor den bösartigen Tieren des Waldes.\n");
+            Console.WriteLine("1 = Du bist wie eine Wolke. Wenn du verschwindest, wird es ein schöner Tag.\n" +
+                              "2 = Du bist so enttäuschend wie eine ungesalzene Brezel.\n" +
+                              "3 = Die wahren Helden sind die Menschen, die dich jeden Tag tolerieren müssen.\n");
 
             bool isCorrectInput = false;
 
@@ -102,7 +95,6 @@ namespace Textadventure
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Du bist wie eine Wolke. Wenn du verschwindest, wird es ein schöner Tag.");
                     Console.ReadLine();
-                    _player.CalculateHealthpoints(-5);
                     Console.ResetColor();
 
                     isCorrectInput = true;
@@ -113,7 +105,6 @@ namespace Textadventure
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Du bist so enttäuschend wie eine ungesalzene Brezel.");
                     Console.ReadLine();
-                    _player.CalculateHealthpoints(-5);
                     Console.ResetColor();
                     isCorrectInput = true;
                 }
@@ -122,6 +113,7 @@ namespace Textadventure
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Die wahren Helden sind die Menschen, die dich jeden Tag tolerieren müssen.");
+                    _player.CalculateDialoguepoints(+5);
                     Console.ReadLine();
                     Console.ResetColor();
                     isCorrectInput = true;
@@ -131,12 +123,12 @@ namespace Textadventure
             Console.Clear();
         }
 
-        public void battleDialogue3()
+        public void BattleDialogue3()
         {
-            Console.WriteLine("Wilderer:Meiner Meinung nach sind Tiere nur dazu da um Geld zu verdienen.");
-            Console.WriteLine("1 = Du solltest eine Pflanze mit dir herumtragen, um den Sauerstoff zu ersetzen, den du verschwendest." +
-                              "2 = Das ist aber ganz schön viel Meinung für so wenig Ahnung." +
-                              "3 = Wenn Genialität eine Generation überspringt, dann werden deine Kinder brillant.");
+            Console.WriteLine("Wilderer:Meiner Meinung nach sind Tiere nur dazu da um Geld zu verdienen.\n");
+            Console.WriteLine("1 = Du solltest eine Pflanze mit dir herumtragen, um den Sauerstoff zu ersetzen, den du verschwendest.\n" +
+                              "2 = Das ist aber ganz schön viel Meinung für so wenig Ahnung.\n" +
+                              "3 = Wenn Genialität eine Generation überspringt, dann werden deine Kinder brillant.\n");
             bool isCorrectInput = false;
 
 
@@ -160,7 +152,6 @@ namespace Textadventure
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Du solltest eine Pflanze mit dir herumtragen, um den Sauerstoff zu ersetzen, den du verschwendest.");
                     Console.ReadLine();
-                    _player.CalculateHealthpoints(-5);
                     Console.ResetColor();
 
                     isCorrectInput = true;
@@ -170,6 +161,7 @@ namespace Textadventure
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Das ist aber ganz schön viel Meinung für so wenig Ahnung.");
+                    _player.CalculateDialoguepoints(+5);
                     Console.ReadLine();
                     Console.ResetColor();
                     isCorrectInput = true;
@@ -180,7 +172,6 @@ namespace Textadventure
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Wenn Genialität eine Generation überspringt, dann werden deine Kinder brillant.");
                     Console.ReadLine();
-                    _player.CalculateHealthpoints(-5);
                     Console.ResetColor();
                     isCorrectInput = true;
                 }
@@ -189,12 +180,12 @@ namespace Textadventure
             Console.Clear();
         }
 
-        public void battleDialogue4()
+        public void BattleDialogue4()
         {
-            Console.WriteLine("Du wirst gleich herausfinden wie mein Stiefel schmeckt.");
-            Console.WriteLine("1 = Zwei IQ-Punkte weniger und du bräuchtest Schuhe mit Klettverschluss." +
-                              "2 = Ist es nicht gefährlich, wenn du dein ganzes Vokabular in einem Satz benutzt?" +
-                              "3 = Du bist der Beweis, dass die Evolution auch rückwärts funktioniert.");
+            Console.WriteLine("Du wirst gleich herausfinden wie mein Stiefel schmeckt.\n");
+            Console.WriteLine("1 = Zwei IQ-Punkte weniger und du bräuchtest Schuhe mit Klettverschluss.\n" +
+                              "2 = Ist es nicht gefährlich, wenn du dein ganzes Vokabular in einem Satz benutzt?\n" +
+                              "3 = Du bist der Beweis, dass die Evolution auch rückwärts funktioniert.\n");
             bool isCorrectInput = false;
 
 
@@ -217,6 +208,7 @@ namespace Textadventure
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Zwei IQ-Punkte weniger und du bräuchtest Schuhe mit Klettverschluss.");
+                    _player.CalculateDialoguepoints(+5);
                     Console.ResetColor();
 
                     isCorrectInput = true;
@@ -226,7 +218,6 @@ namespace Textadventure
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Ist es nicht gefährlich, wenn du dein ganzes Vokabular in einem Satz benutzt?");
-                    _player.CalculateHealthpoints(-5);
                     Console.ResetColor();
                     isCorrectInput = true;
                 }
@@ -235,7 +226,6 @@ namespace Textadventure
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Du bist der Beweis, dass die Evolution auch rückwärts funktioniert.");
-                    _player.CalculateHealthpoints(-5);
                     Console.ResetColor();
                     isCorrectInput = true;
                 }
@@ -245,6 +235,33 @@ namespace Textadventure
 
         }
 
+        internal void Dialogueresult()
+        {
+            if (_player.DialoguePoints < 15)
+            {
+                Console.WriteLine("Wilderer: Jetzt reichts langsam, Kurzer. Entweder du verschwindest jetzt aus meinem Sichtfeld, oder du leistest meiner Beute gesellschaft.\n" +
+                    "Eingeschüchtert von seiner Drohung machst du auf der Stelle kehrt und verlässt das Lager. Die Schahm über deine Niederlage fügt dir körperliche Schmerzen zu \n" +
+                    "Du verlierst 10 Healthpoints");
 
+                _player.CalculateHealthpoints(-10);
+            }
+            else if (_player.DialoguePoints >= 15)
+            {
+                Console.WriteLine("Wilderer: So hat noch niemand mit mir gesprochen. Aber vielleicht sollte ich meine Meinung noch einmal überdenken.\n" +
+                    "Danke Kleiner. Manchmal brauchen auch die Erwachsenen einen Schups in die richtige Richtung. Denke ich werde mich nach einer \n" +
+                    "anderen Arbeit umschauen.\n" +
+                    "Du verabschiedest dich mit einem guten Gefühl im Bauch und wünschst ihm viel Glück bei der Jobsuche");
+
+                Console.BackgroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Achievement unlocked: Mindchanger");
+                Console.ReadLine();
+                Console.ResetColor();
+                Console.Clear();
+            }
+
+        }
     }
 }
+    
