@@ -11,13 +11,6 @@
         
         internal bool HasEnergyDrink {  get; set; }
         
-
-        
-
-        
-        
-
-
         internal Player()
         {
             HealthPoints = 20;
@@ -39,14 +32,18 @@
             {
                 HealthPoints = 20;
             } 
-            else if ( HealthPoints <= 0)
+        }
+
+        internal void GameOver(int lostPoints)
+        {
+            HealthPoints -= lostPoints;
+
+            if ( HealthPoints <= 0 )
             {
                 Console.WriteLine("GAME OVER");
                 Console.ReadLine();
                 Titlescreen.StartingScreen();
-
             }
-            
         }
 
         internal void CalculateDialoguepoints(int dialoguepointsNumber)

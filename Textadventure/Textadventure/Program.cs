@@ -5,11 +5,9 @@ public static class Adventure
     public static void Main()
     {
         Titlescreen.StartingScreen();
-        Console.ReadLine();
-
+        
         Player player = Prologue.Character();
-        Console.ReadLine();
-
+        
         Prologue prologue = new Prologue(player);
         prologue.Intro();
 
@@ -31,7 +29,9 @@ public static class Adventure
         battle.BattleDialogue4();
         battle.Dialogueresult();
         
-
+        Epilogue epilogue = new Epilogue(player);
+        epilogue.Beginning();
+        
         
         
         
