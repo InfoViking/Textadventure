@@ -16,14 +16,17 @@
             Console.ResetColor();
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Der Wald lichtet sich und du betrittst einen Hain. Als du genauer hinsiehst siehst du dutzende Pflöcke welche in den Boden getrieben wurden. \n" +
+            Console.WriteLine("Der Wald lichtet sich und du betrittst einen Hain.\n" +
+                "Als du genauer hinsiehst siehst du dutzende Pflöcke welche in den Boden getrieben wurden.\n" +
                 "Während du versuchst zu verstehen was es damit auf sich hat, siehst du wie ein Reh den Hain betritt.\n" +
-                " Als es dich bemerkt rennt es schnurstracks Richtung der Pflöcke.\n" +
+                "Als es dich bemerkt rennt es schnurstracks Richtung der Pflöcke.\n" +
                 "Kurz darauf hörst du ein metallisches Geräusch gefolgt von einem schmerzerfüllten Schrei des Rehs.\n" +
-                " Danach... Stille\n");
+                "Danach... Stille\n");
             Console.ReadLine();
-            Console.WriteLine("Dir wird schlagartig heiß und kalt. Du versuchst mit der Taschenlampe zu sehen was passiert ist. Hättest du es doch besser gelassen.\n" +
-                "Der gesamte Bereich ist übersäht mit Tierkadavern. Du versuchst nicht laut loszuschreien. Nachdem du dich beruhigt hast erinnerst du dich daran, \n" +
+            Console.WriteLine("Dir wird schlagartig heiß und kalt. Du versuchst mit der Taschenlampe zu sehen was passiert ist.\n" +
+                "Hättest du es doch besser gelassen.\n" +
+                "Der gesamte Bereich ist übersäht mit Tierkadavern. Du versuchst nicht laut loszuschreien.\n" +
+                "Nachdem du dich beruhigt hast erinnerst du dich daran, \n" +
                 "dass eine Bande Wilderer in diesem Wald ihr Unwesen treibt.\n");
             Console.ReadLine();
             Console.Clear();
@@ -33,7 +36,8 @@
 
             if (_player.IsGoatMaster)
             {
-                Console.WriteLine("Dein neuer Begleiter schreitet unbeirrt voran. Nach ein paar Metern dreht er sich zu dir um und scheint auf dich zu warten.\n" +
+                Console.WriteLine("Dein neuer Begleiter schreitet unbeirrt voran.\n " +
+                    "Nach ein paar Metern dreht er sich zu dir um und scheint auf dich zu warten.\n" +
                     "Offenbar möchte die Ziege, dass du ihr folgst.\n" +
                     $"{_player.Name}: Ich lege mein Leben in die Hände einer Ziege. Vielleicht sollte ich meinen Kopf untersuchen lassen.\n" +
                     "Du folgst deinem Begleiter durch das Feld aus Fallen. Und tatsächlich scheint die Ziege zu wissen was sie tut.\n" +
@@ -46,7 +50,8 @@
             }
 
 
-            Console.WriteLine("Nach langem grübeln fällt dir ein Pflock auf der ein wenig abseits steht. Es scheint etwas mit einem Messer eingeritzt zu sein.\n");
+            Console.WriteLine("Nach langem grübeln fällt dir ein Pflock auf der ein wenig abseits steht.\n" +
+                "Es scheint etwas mit einem Messer eingeritzt zu sein.\n");
             Console.ReadLine();
             Console.WriteLine("Start 2xV, 1xR, 2xV, 2xL, 3xV \n");
             Console.ReadLine();
@@ -54,7 +59,8 @@
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.WriteLine("Hinweis: Die Nachricht wird dir nur einmal angezeigt. Präge dir gut ein was dort steht. Falls nicht wird es schmerzhaft.\n" +
+            Console.WriteLine("Hinweis: Die Nachricht wird dir nur einmal angezeigt.\n" +
+                "Präge dir gut ein was dort steht. Falls nicht wird es schmerzhaft.\n" +
                 "Steuerung: Pfeiltaste links = links \n" +
                            "Pfeiltaste rechts = rechts \n" +
                            "Pfeiltaste hoch = vorwärts \n");
@@ -141,7 +147,7 @@
         internal void Wrongchoices(int multiplier, int damage)
         {
             Console.WriteLine($@"Dein überragender Intellekt ließ dich {multiplier} mal im Stich.
-                                 Du erhälst {damage} Schaden. Angeschlagen setzt du deine Reise weiter fort.");
+                 Du erhälst {damage} Schaden. Angeschlagen setzt du deine Reise weiter fort.");
 
 
         }

@@ -17,31 +17,31 @@
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Du beschließt fürs Erste dem Weg zu folgen auf dem du erwacht bist.\n" +
-                " Nach einer Weile bemerkst du vor dir ein schwaches Leuchten. Als du dich näherst,\n" +
-                " erkennst du die Lichtquelle. Erleichterung durchströmt deinen Körper");
+                "Nach einer Weile bemerkst du vor dir ein schwaches Leuchten. Als du dich näherst,\n" +
+                "erkennst du die Lichtquelle. Erleichterung durchströmt deinen Körper");
             Console.ReadLine();
             Console.WriteLine($"{_player.Name}: Ein Handy! Ich bin gerettet!");
             Console.ReadLine();
             Console.WriteLine("Du schaltest das Handy ein und deine Hoffnung verfliegt so schnell,\n" +
-                " wie sie gekommen war.\n" +
+                "wie sie gekommen war.\n" +
                 "Kein Empfang. Nicht einmal Notrufe sind verfügbar. Jedoch bemerkst du etwas merkwürdiges.\n" +
                 "Es befindet sich nur eine einzige App auf dem Handy.\n");
             Console.ReadLine();
             Console.WriteLine($"{_player.Name}: MediServApp. Mh. Das ist doch diese großartige Bank für \n" +
-                " medizinische Transaktionen." +
+                "medizinische Transaktionen." +
                 "Bekannt aus Funk und Fernsehen und dazu noch weltweit geschätzt und anerkannt. ");
             Console.ReadLine();
             Console.Clear();
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine("Hinweis: Gutes/Schlechtes Ende.\n" +
-                " Wenn du auf deiner Reise verletzt wirst, musst du am Ende medizinische\n" +
-                " Leistungen in Anspruch nehmen. Du willst schließlich nicht, dass sich deine\n" +
-                " Eltern noch mehr Sorgen machen. " +
+                "Wenn du auf deiner Reise verletzt wirst, musst du am Ende medizinische\n" +
+                "Leistungen in Anspruch nehmen. Du willst schließlich nicht, dass sich deine\n" +
+                "Eltern noch mehr Sorgen machen. " +
                 "Die Kosten der medizinischen Leistungen hängen von deinen Lebenspunkten am Ende\n" +
                 " des Abenteuers ab" +
                 "Je weniger Lebenspunkte, desto kostspieliger die Leistungen, desto größer der Ärger,\n" +
-                " der dich zu Hause erwartet.\n" +
+                "der dich zu Hause erwartet.\n" +
                 "Versuche gesund zu bleiben und sei vorsichtig\n");
             Console.ResetColor();
             Console.ReadLine();
@@ -50,7 +50,7 @@
                 "Nach einer Weile gabelt sich der Weg in zwei Richtungen. Du leuchtest mit der Taschenlampe des Handys die Wege aus.\n");
             Console.ReadLine();
             Console.WriteLine("Der linke Weg scheint deutlich schlechter ausgebaut zu sein. Einige Dornenranken wuchern über den Weg\n" +
-                " und Schlaglöcher bergen die Gefahr bei einem falschen Schritt deinen Knöchel zu verletzen.\n" +
+                "und Schlaglöcher bergen die Gefahr bei einem falschen Schritt deinen Knöchel zu verletzen.\n" +
                 "Der rechte Weg sieht, im Vergleich, deutlich besser aus. Allerdings bemerkst du auf dem Boden Fußspuren.\n" +
                 "Als du sie genauer untersuchst stellst du fest, dass diese Fußspuren definitiv nicht von Menschen stammen.\n" +
                 "Du kannst sie keinem Tier zuordnen. Je länger du sie untersuchst desto unwohler fühlst du dich.\n");
@@ -99,12 +99,15 @@
 
         internal void Leftway()
         {
-            Console.WriteLine($"{_player.Name}: Diese Tierspuren sind mir nicht geheuer. Ich lege mich lieber mit ein paar Dornen und Schlaglöchern an als mit einer wilden Bestie.\n " +
+            Console.WriteLine($"{_player.Name}: Diese Tierspuren sind mir nicht geheuer.\n" +
+                $"Ich lege mich lieber mit ein paar Dornen und Schlaglöchern an als mit einer wilden Bestie.\n " +
                 "Du setzt deine Reise auf dem linken Pfad fort.\n");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Und es kam wie es kommen musste. Nach einem Moment der Unachtsamkeit trittst du ins Leere und fällst mit dem Gesicht vorran in einen Dornenbusch.\n " +
-                "Du spürst wie die Dornen sich in deine Haut arbeiten und kleine Kratzer hinterlassen. Außerdem spürst du einen leichten Schmerz in deinem linken Knöchel.\n " +
+            Console.WriteLine("Und es kam wie es kommen musste. Nach einem Moment der Unachtsamkeit trittst du\n" +
+                "ins Leere und fällst mit dem Gesicht vorran in einen Dornenbusch.\n " +
+                "Du spürst wie die Dornen sich in deine Haut arbeiten und kleine Kratzer hinterlassen.\n" +
+                "Außerdem spürst du einen leichten Schmerz in deinem linken Knöchel.\n " +
                 "Du bekommst 5 Schaden\n");
 
             _player.CalculateHealthpoints(-5);
@@ -125,8 +128,10 @@
             Console.WriteLine("Während du den Weg beschreitest macht sich Paranoia in dir breit. Jedes Geräusch lässt dich zusammen zucken.\n " +
                 "Du spürst wie dich jemand oder etwas beobachtet. Plötzlich springt etwas vor dir aus dem Gebüsch.\n ");
             Console.ReadLine();
-            Console.WriteLine("Panisch reißt du die Taschenlampe deines Handys hoch und richtest sie auf das Biest. Du starst direkt in die Augen eines Ziegenbocks. \n" +
-                "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist. Andererseits schwingt auch ein wenig Ärger mit da es eine Ziege geschafft hat dir Todesangst einzujagen \n");
+            Console.WriteLine("Panisch reißt du die Taschenlampe deines Handys hoch und richtest sie auf das Biest.\n" +
+                "Du starst direkt in die Augen eines Ziegenbocks. \n" +
+                "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist. Andererseits schwingt auch ein wenig Ärger mit\n" +
+                "da es eine Ziege geschafft hat dir Todesangst einzujagen \n");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Du entscheidest dich den Ziegenbock zu...\n" +
@@ -185,14 +190,15 @@
         {
             Console.WriteLine("Du bäumst dich auf und stößt einen ,deiner Meinung nach, markerschütternden Schrei aus.\n " +
                 "Der Ziegenbock zeigt sich davon allerdings nur wenig beeindruckt, nimmt Anlauf und\n" +
-                "rammt dich mit seinen Hörnern zu Boden. Seinen Sieg über dich quitiert er mit einem Määäh und entschwindet in die Dunkelheit.\n" +
+                "rammt dich mit seinen Hörnern zu Boden. Seinen Sieg über dich quittiert er mit einem Määäh\n " +
+                "und entschwindet in die Dunkelheit.\n" +
                 "Du erhälst 10 Schaden. ");
 
             _player.CalculateHealthpoints(-10);
 
             Console.ReadLine();
             Console.WriteLine("Nachdem der Schmerz etwas nachlässt und du die Tatsache verarbeitet hast,\n" +
-                " dass dich eine Ziege besiegt hat setzt du deinen Weg mit gekränktem Ego fort");
+                "dass dich eine Ziege besiegt hat setzt du deinen Weg mit gekränktem Ego fort");
             Console.ReadLine();
             Console.Clear();
         }
