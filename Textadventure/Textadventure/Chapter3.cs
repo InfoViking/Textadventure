@@ -13,7 +13,7 @@
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Das Lager");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
 
             Console.WriteLine("Nach dieser nervenaufreibenden Erfahrung fühlst du, wie sich Erschöpfung in dir breit macht.\n" +
                 "Du beschließt eine kurze Rast einzulegen. Du erinnerst dich an den Energydrink in deiner Tasche.\n" +
@@ -28,7 +28,7 @@
                 "1 = Rasten (5HP)\n" +
                 "2 = Energydrink trinken (10HP)\n");
 
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
 
         }
 
@@ -53,7 +53,7 @@
                 else
                 {
                     Console.WriteLine("Bitte nutzen sie die vorgegebenen Eingabetasten.");
-                    Textscroll.TextScroll();
+                    ConsoleText.Continue();
                 }
             }
         }
@@ -64,17 +64,17 @@
                 "Nach einer Weile entdeckst du den Schein eines Lagerfeuers in weiter Ferne.\n" +
                 "Im ersten Moment freust du dich über ein Zeichen von Zivilisation.\n" +
                 "Jedoch schwebt auch der Hintergedanke über die Wilderer in deinem Kopf herum.\n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}: Das Feuer scheint mein einziger Anhaltspunkt zu sein.\n" +
                 $"Selbst wenn ich dort einen dieser Wilderer finden sollte, werde ich ihm ordentlich die Meinung geigen.\n" +
                 "Ich hätte schließlich sterben können wegen diesen verantwortungslosen Fallen.\n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine("Du läufst dem Licht des Lagerfeuers entgegen.\n" +
                 "Als du dich näherst siehst du tatsächlich wie sich jemand am Lagerfeuer ein Stück Fleisch brät.\n" +
                 "An einer Leine hängen einige Tierkörper leblos herab. Manche davon wurden bereits gehäutet.\n" +
                 "Mit einer Mischung aus Furcht und Wut gibst du dich der Person zu erkennen.\n" +
                 "Mit einem lauten Hey!! verschaffst du dir Gehör.");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine("Der Mann scheint, von deiner Anwesenheit nicht überrascht zu sein.\n" +
                 "Vermutlich haben seine geschärften Sinne dich längst erspäht.\n" +
                 "Er schaut dich für ein paar Sekunden reglos an und beginnt danach sich aufzurichten.\n" +
@@ -82,12 +82,12 @@
                 "dass dieser Kerl mindestens 2 Meter groß und ebenso breit gebaut ist.\n" +
                 "Du kommst zu dem Entschluss, dass Gewalt als Lösung ungeeignet zu sein scheint\n" +
                 "Du entscheidest dich ihn verbal zu konfrontieren.\n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}: Bist du verantwortlich für das Massaker auf dem Hain?\n" +
                  "Wilderer: Ja das bin ich. Hast du ein Problem damit, Knirps?\n" +
                 $"{_player.Name}: Welchen Minderwertigkeitskomplex versuchst du damit zu kompensieren?\n" +
                  "Und damit beginnt das Wortgefecht.");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
         }
 
         internal void BattleDailogueOpening()
@@ -100,7 +100,7 @@
                 "Wenn du es schaffst mindestens 3 schlagfertige Antworten zu geben,\n" +
                 "wird er seine berufliche Karriere vielleicht überdenken..\n" +
                 "Tipp: Die richtige Antwort passt inhaltlich zur Aussage des Wilderers.");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
 
 
         }

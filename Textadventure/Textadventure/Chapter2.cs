@@ -13,7 +13,7 @@
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Wandloses Labyrinth");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine("Der Wald lichtet sich und du betrittst einen Hain.\n" +
                 "Als du genauer hinsiehst siehst du dutzende Pflöcke welche in den Boden getrieben wurden.\n" +
                 "Während du versuchst zu verstehen was es damit auf sich hat, siehst du wie ein Reh den Hain betritt.\n" +
@@ -26,9 +26,9 @@
                 "Der gesamte Bereich ist übersäht mit Tierkadavern. Du versuchst nicht laut loszuschreien.\n" +
                 "Nachdem du dich beruhigt hast erinnerst du dich daran, \n" +
                 "dass eine Bande Wilderer in diesem Wald ihr Unwesen treibt.\n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}: Was für eine Barberei. Wenn ich versuche hier einfach durchzulaufen wird es mir nicht anders ergehen. ");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
 
 
             if (_player.IsGoatMaster)
@@ -49,7 +49,7 @@
 
             Console.WriteLine("Nach langem grübeln fällt dir ein Pflock auf, der ein wenig abseits steht.\n" +
                 "Es scheint etwas eingeritzt worden zu sein.\n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine("Start 2xV, 1xR, 2xV, 2xL, 3xV \n");
             
             Console.BackgroundColor = ConsoleColor.Green;
@@ -61,9 +61,9 @@
                 "Steuerung: Pfeiltaste links = links \n" +
                            "Pfeiltaste rechts = rechts \n" +
                            "Pfeiltaste hoch = vorwärts \n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine("Nachdem du dir die Nachricht ausgiebig eingeprägt hast setzt du deinen Weg fort. \n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
 
             List<ConsoleKey> pressedkeys = GetLabyrinthKeys();
             List<ConsoleKey> correctkeys = CorrectLabyrinthKeys();

@@ -13,21 +13,21 @@
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Zivilisation");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine("Nach einer gefühlten Ewigkeit des Laufens und nachdem du schon mehrfach sämtliche Hoffnung verloren hast\n" +
                 "je wieder aus diesem Wald zu kommen, siehst du in der Ferne etwas aufleuchten.\n" +
                 "Als deine müden Augen erkennen um was es sich handelt trifft es dich wie ein Blitz\n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}: Ich werd verrückt... das sind die Scheinwerfer eines Autos. Und das bedeutet...\n" +
             "Noch bevor du deinen Gedanken beendest läufst du so schnell dich deine müden Beine tragen in Richtung der Straße\n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Console.WriteLine("Und tatsächlich. Du brichst durch die letzten Büsche und stehst auf einer Landstraße.\n" +
                 "Als du dich umsiehst erkennst du einige Gebäude wieder und weißt, seit einer Ewigkeit wieder, wo du dich befindest.\n" +
                 "Es ist eine der Landstraßen die sich um deine Heimatstadt ziehen.\n" +
                 "Du möchtest am liebsten schnellstmöglich nach Hause und deine Eltern umarmen.\n" +
                 "Jedoch hälst du es für vernünftiger zuerst einen Arzt aufzusuchen.\n" +
                 "Glücklicherweise weißt du, dass sich ein Arzt ganz in der Nähe befindet.\n");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
 
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
@@ -50,7 +50,7 @@
                 if (!int.TryParse(choice, out convertedChoice))
                 {
                     Console.WriteLine("Bitte nutzen sie die vorgegebenen Eingabetasten.");
-                    Textscroll.TextScroll();
+                    ConsoleText.Continue();
 
                     continue;
                 }
@@ -95,7 +95,7 @@
                     "Du gibst parallel alle Behandlungen in die MediServApp ein.\n" +
                     "Bei einem Blick auf die Gesamtkosten wird dir fast Schwarz vor Augen.\n" +
                     "Angsterfüllt trottest du nach Hause.");
-                Textscroll.TextScroll();
+                ConsoleText.Continue();
                 Console.WriteLine("Die Begrüßung zu Hause gestaltet sich herzlich aber als du deinen Eltern die Rechnung zeigst wird es schlagartig still.\n" +
                     "Glücklicherweise kann durch die hervorragenden\n" +
                     "Leistungen der MediServ eine angenehme und stämmbare Staffelung der Kosten erfolgen.\n" +

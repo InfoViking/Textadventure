@@ -15,7 +15,7 @@ namespace Textadventure
 
 
             Console.WriteLine("Game Over");
-            Textscroll.TextScroll();
+            ConsoleText.Continue();
             Program.Main();
             Environment.Exit(0);
 
