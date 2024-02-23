@@ -244,6 +244,17 @@
                     "Du verlierst 10 Healthpoints");
 
                 _player.CalculateHealthpoints(-10);
+
+                if (_player.HealthPoints <= 0)
+                {
+                    Gameover.GameOver("Die Scham über deine Niederlage lässt dein Herz verkrampfen. Du stirbst noch an Ort und Stelle.");
+                }
+                    
+
+
+
+
+                
             }
             else if (_player.DialoguePoints >= 15)
             {
@@ -261,6 +272,7 @@
                 Console.Clear();
             }
 
+            
         }
     }
 }

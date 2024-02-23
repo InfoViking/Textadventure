@@ -69,7 +69,18 @@
             List<ConsoleKey> correctkeys = CorrectLabyrinthKeys();
             int multiplier = CountFailures(pressedkeys,correctkeys);
             int calculator = DamageCalculator(multiplier);
+            _player.CalculateHealthpoints(-calculator);
+
+            if (_player.HealthPoints <= 0 )
+            {
+                Gameover.GameOver("Dein Mangel an Orientierung wird dir zum Verhängis. Nach einem knacken gibt der Boden nach\n" +
+                    "und du fällst in eine Fallgrube voller spitzer Pfähle.");
+            }
+
             
+            
+
+
             if (multiplier > 0)
             {
                 Wrongchoices(multiplier, calculator);
@@ -78,6 +89,8 @@
             {
                 Rightchoices();
             }
+
+            
         }
 
 
@@ -87,10 +100,13 @@
             List<ConsoleKey> pressedkeys = new List<ConsoleKey>();
 
             for (int i = 0; i < 10; i++)
-            {
+            {//Schneidet einen String zurecht.
                 ConsoleKeyInfo keypressed = Console.ReadKey();
-                Console.WriteLine($"{keypressed.Key}");
+                string keystring = keypressed.Key.ToString();
+                string key = keystring.Substring(0, keystring.Length - 5);
 
+                Console.WriteLine($"{key}");
+                
                 pressedkeys.Add(keypressed.Key);
             }
             return pressedkeys;
@@ -134,15 +150,17 @@
         internal int DamageCalculator(int multiplier, int damage = 2)
         {
             int damageMultiplier = multiplier * damage;
-
             return damageMultiplier;
         } 
+
+        
         
         internal void Wrongchoices(int multiplier, int damage)
         {
             Console.WriteLine($@"Dein überragender Intellekt ließ dich {multiplier} mal im Stich.
                  Du erhälst {damage} Schaden. Angeschlagen setzt du deine Reise weiter fort.");
 
+            
 
         }
         

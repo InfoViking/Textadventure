@@ -1,4 +1,6 @@
-﻿namespace Textadventure
+﻿using System;
+
+namespace Textadventure
 {
     internal class Chapter1
     {
@@ -31,15 +33,15 @@
             Textscroll.TextScroll();
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine("Hinweis: Gutes/Schlechtes Ende.\n" +
-                "Wenn du auf deiner Reise verletzt wirst, musst du am Ende medizinische\n" +
-                "Leistungen in Anspruch nehmen. Du willst schließlich nicht, dass sich deine\n" +
+            Console.WriteLine("Hinweis: Gutes/Schlechtes Ende.\n" +                                     
+                "Wenn du auf deiner Reise verletzt wirst, musst du am Ende medizinische\n" +           
+                "Leistungen in Anspruch nehmen. Du willst schließlich nicht, dass sich deine\n" +       
                 "Eltern noch mehr Sorgen machen. " +
-                "Die Kosten der medizinischen Leistungen hängen von deinen Lebenspunkten am Ende\n" +
-                "des Abenteuers ab\n" +
+                "Die Kosten der medizinischen Leistungen hängen von deinen Lebenspunkten am Ende\n" +   
+                "des Abenteuers ab\n" +                                                             
                 "Je weniger Lebenspunkte, desto kostspieliger die Leistungen, desto größer der Ärger,\n" +
-                "der dich zu Hause erwartet.\n" +
-                "Versuche gesund zu bleiben und sei vorsichtig.\n");
+                "der dich zu Hause erwartet.\n" +                                                    
+                "Versuche gesund zu bleiben und sei vorsichtig.\n");                                 
             Textscroll.TextScroll();
             Console.WriteLine("Nachdem du sich mit den Funktionen vertraut gemacht hast setzt du deinen Weg nach Hause weiter fort.\n" +
                 "Nach einer Weile gabelt sich der Weg in zwei Richtungen. Du leuchtest mit der Taschenlampe des Handys die Wege aus.\n");
@@ -50,45 +52,57 @@
                 "Als du sie genauer untersuchst stellst du fest, dass diese Fußspuren definitiv nicht von Menschen stammen.\n" +
                 "Du kannst sie keinem Tier zuordnen. Je länger du sie untersuchst desto unwohler fühlst du dich.\n");
 
-            Decision();
+            Decision1();
         }
 
-        internal void Decision()
+        internal void Decision1()
         {
             Console.WriteLine($"{_player.Name}: Jeder der Wege hat seine Unsicherheiten. Aber ich muss weiter. Zurückgehen ist keine Option \n" +
                 "Ich entscheide mich für...\n" +
                 "1 = Linker Weg\n" +
                 "2 = Rechter Weg\n");
 
+            
+
+
             bool isCorrectInput = false;
 
-            
+
             while (isCorrectInput == false)
             {
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
 
-                    if (!int.TryParse(choice, out convertedChoice))
-                    {
-                        Console.WriteLine("Bitte nutzen sie die vorgegebenen Eingabetasten.");
-                        
+                if (!int.TryParse(choice, out convertedChoice))
+                {
+                    Console.WriteLine("Bitte nutzen sie die vorgegebenen Eingabetasten.");
+                    Console.ReadLine();
+                    Console.Clear();
 
-                        continue;
-                    }
-                
-                 if (convertedChoice == 1)
+                    continue;
+                }
+
+                if (convertedChoice == 1)
                 {
                     Leftway();
+                    Console.ReadLine();
+                    
                     isCorrectInput = true;
                 }
                 else if (convertedChoice == 2)
                 {
                     Rightway();
+                    Console.ReadLine();
+                    
                     isCorrectInput = true;
                 }
-              
             }
+
+
         }
+
+        
+    
 
 
         internal void Leftway()
@@ -116,58 +130,74 @@
                 $"zwar jagt mir der Gedanke an das Tier Angst ein, jedoch komme ich auf dem rechten Pfad schneller vorwärts.\n" +
                 "Du setzt deine Reise auf dem rechten Pfad fort\n");
             Textscroll.TextScroll();
-            Console.WriteLine("Während du den Weg beschreitest macht sich Paranoia in dir breit. Jedes Geräusch lässt dich zusammen zucken.\n " +
+            Console.WriteLine("Während du den Weg beschreitest macht sich Paranoia in dir breit.\n" +
+                "Jedes Geräusch lässt dich zusammen zucken.\n " +
                 "Du spürst wie dich jemand oder etwas beobachtet. Plötzlich springt etwas vor dir aus dem Gebüsch.\n ");
             Textscroll.TextScroll();
             Console.WriteLine("Panisch reißt du die Taschenlampe deines Handys hoch und richtest sie auf das Biest.\n" +
                 "Du starst direkt in die Augen eines Ziegenbocks. \n" +
-                "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist. Andererseits schwingt auch ein wenig Ärger mit\n" +
+                "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist.\n " +
+                "Andererseits schwingt auch ein wenig Ärger mit\n" +
                 "da es eine Ziege geschafft hat dir Todesangst einzujagen \n");
             Textscroll.TextScroll();
             Console.WriteLine("Du entscheidest dich den Ziegenbock zu...\n" +
                 "1 = Streicheln\n" +
                 "2 = Verjagen\n");
-            
-
 
             bool isCorrectInput = false;
 
+
             while (isCorrectInput == false)
             {
-                int choice = Convert.ToInt32(Console.ReadLine());
+                string choice = Console.ReadLine();
+                int convertedChoice = 0;
 
-                if (choice == 1)
-                {
-                    Pet();
-                    isCorrectInput = true;
-                }
-
-                if (choice == 2)
-                {
-                    Scare();
-                    isCorrectInput = true;
-                }
-
-                else
+                if (!int.TryParse(choice, out convertedChoice))
                 {
                     Console.WriteLine("Bitte nutzen sie die vorgegebenen Eingabetasten.");
-                    
+                    Console.ReadLine();
+                    Console.Clear();
+
+                    continue;
+                }
+
+                if (convertedChoice == 1)
+                {
+                    Pet();
+                    Console.ReadLine();
+
+                    isCorrectInput = true;
+                }
+                else if (convertedChoice == 2)
+                {
+                    Scare();
+                    Console.ReadLine();
+
+                    isCorrectInput = true;
                 }
             }
+
+
+
+
         }
+
         internal void Pet()
         {
-            Console.WriteLine("Du kniest dich hin und streckst deinen Arm aus. Vorsichtig aber neugierig nähert sich der Ziegenbock bis er deine Hand erreicht. \n" +
-                "Du streichselst ihm über den Kopf, was er mit einem fröhlichen Määääh quitiert. Als du dich aufrichtest und weiter gehen willst scheint \n" +
+            Console.WriteLine("Du kniest dich hin und streckst deinen Arm aus.\n " +
+                "Vorsichtig aber neugierig nähert sich der Ziegenbock bis er deine Hand erreicht. \n" +
+                "Du streichselst ihm über den Kopf, was er mit einem fröhlichen Määääh quitiert.\n " +
+                "Als du dich aufrichtest und weiter gehen willst scheint \n" +
                 "es als würde der Ziegenbock dir folgen\n");
             Textscroll.TextScroll();
-            Console.WriteLine($"{_player.Name}: Scheinst wohl auch von hier weg zu wollen. Mir solls Recht sein. Ein bisschen Gesellschaft tut uns beiden gut.\n");
+            Console.WriteLine($"{_player.Name}: Scheinst wohl auch von hier weg zu wollen. Mir solls Recht sein.\n " +
+                $"Ein bisschen Gesellschaft tut uns beiden gut.\n");
 
             Console.BackgroundColor = ConsoleColor.Yellow;
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Achievement unlocked: Goatmaster");
-            Textscroll.TextScroll();
+            Console.Clear();
 
             _player.IsGoatMaster = true;
 
@@ -187,7 +217,7 @@
             Textscroll.TextScroll();
             Console.WriteLine("Nachdem der Schmerz etwas nachlässt und du die Tatsache verarbeitet hast,\n" +
                 "dass dich eine Ziege besiegt hat setzt du deinen Weg mit gekränktem Ego fort");
-            Textscroll.TextScroll();
+            Console.Clear();
         }
     }
 }

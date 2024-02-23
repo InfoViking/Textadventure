@@ -1,12 +1,12 @@
 ﻿using Textadventure;
 
-public static class Adventure
+public static class Program
 {
     public static void Main()
     {
         Titlescreen.StartingScreen();
         
-        Player player = Prologue.Character();
+         Player player = Prologue.Character();
         
         Prologue prologue = new Prologue(player);
         prologue.Intro();

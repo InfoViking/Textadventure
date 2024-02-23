@@ -24,9 +24,10 @@
         {
             HealthPoints += healthpointsDifference;
             
-            if ( HealthPoints < 0 )
+            if ( HealthPoints <= 0 )
             {
                 HealthPoints = 0;
+                
             }
             else if ( HealthPoints > 20)
             {
@@ -34,17 +35,7 @@
             } 
         }
 
-        internal void GameOver(int lostPoints)
-        {
-            HealthPoints -= lostPoints;
-
-            if ( HealthPoints <= 0 )
-            {
-                Console.WriteLine("GAME OVER");
-                Console.ReadLine();
-                Titlescreen.StartingScreen();
-            }
-        }
+       
 
         internal void CalculateDialoguepoints(int dialoguepointsNumber)
         {

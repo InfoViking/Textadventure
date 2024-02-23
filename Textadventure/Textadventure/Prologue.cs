@@ -20,6 +20,8 @@
             {
                 Console.WriteLine("Fehlermeldung 418: Es muss ein Name eingetragen werden.");
                 Console.WriteLine("Geben sie einen Namen für ihren Charakter ein.");
+                Console.ReadLine();
+                Console.Clear();
                 name = Console.ReadLine();
             }
 

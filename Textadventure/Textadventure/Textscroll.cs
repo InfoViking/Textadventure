@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Textadventure
 {
-    internal static class Textscroll
+    internal  class Textscroll
     {
+        
         internal static void TextScroll()
         {
             Console.ReadLine();
@@ -15,5 +16,7 @@ namespace Textadventure
             Console.Clear();
             
         }
+
+        
     }
 }

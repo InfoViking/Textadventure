@@ -12,7 +12,7 @@ namespace Textadventure
             Console.WriteLine("The Other Way Home\n" +
                 "Press Enter to Start\n" +
                 "Press anything to Exit\n");
-            Textscroll.TextScroll();
+            Console.ResetColor();
 
             ConsoleKeyInfo start = Console.ReadKey();
             if (start.Key != ConsoleKey.Enter)
