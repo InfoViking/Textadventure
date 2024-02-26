@@ -2,6 +2,9 @@
 
 namespace Textadventure
 {
+    /// <summary>
+    /// Constructor Player Class
+    /// </summary>
     internal class Chapter1
     {
         Player _player;
@@ -9,6 +12,10 @@ namespace Textadventure
         {
             _player = player;
         }
+
+        /// <summary>
+        /// Intro Chapter 1
+        /// </summary>
         public void Beginning()
         {
             Console.BackgroundColor = ConsoleColor.Red;
@@ -55,6 +62,9 @@ namespace Textadventure
             Decision1();
         }
 
+        /// <summary>
+        /// Bool query decision
+        /// </summary>
         internal void Decision1()
         {
             Console.WriteLine($"{_player.Name}: Jeder der Wege hat seine Unsicherheiten. Aber ich muss weiter. Zurückgehen ist keine Option \n" +
@@ -62,13 +72,9 @@ namespace Textadventure
                 "1 = Linker Weg\n" +
                 "2 = Rechter Weg\n");
 
-            
-
-
             bool isCorrectInput = false;
 
-
-            while (isCorrectInput == false)
+                while (isCorrectInput == false)
             {
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
@@ -97,14 +103,11 @@ namespace Textadventure
                     isCorrectInput = true;
                 }
             }
-
-
         }
 
-        
-    
-
-
+        /// <summary>
+        /// possible choices 1
+        /// </summary>
         internal void Leftway()
         {
             Console.WriteLine($"{_player.Name}: Diese Tierspuren sind mir nicht geheuer.\n" +
@@ -146,7 +149,6 @@ namespace Textadventure
 
             bool isCorrectInput = false;
 
-
             while (isCorrectInput == false)
             {
                 string choice = Console.ReadLine();
@@ -176,12 +178,11 @@ namespace Textadventure
                     isCorrectInput = true;
                 }
             }
-
-
-
-
         }
 
+        /// <summary>
+        /// follow up choices
+        /// </summary>
         internal void Pet()
         {
             Console.WriteLine("Du kniest dich hin und streckst deinen Arm aus.\n " +
@@ -200,8 +201,6 @@ namespace Textadventure
             Console.Clear();
 
             _player.IsGoatMaster = true;
-
-
         }
 
         internal void Scare()

@@ -3,6 +3,9 @@ using System.Xml.Linq;
 
 namespace Textadventure
 {
+    /// <summary>
+    /// Konstruktor für Playerklasse
+    /// </summary>
     internal class Prologue
     {
         Player _player;
@@ -11,7 +14,7 @@ namespace Textadventure
             _player = player;
         }
         /// <summary>
-        /// Character informations.
+        /// "Choose Name" Method
         /// </summary>
         internal static Player Character()
         {
@@ -26,30 +29,25 @@ namespace Textadventure
                 Console.ReadLine();
 
                 name = Console.ReadLine();
-
-                
-
-                
             }
+
             player.Name = name;
             return player;
-        }    
+        }
+
+        /// <summary>
+        /// Show Character informations
+        /// </summary>
+        /// <param name="name">choosed name</param>
         internal void CharacterDetails(string name)
         {
-            
             Console.WriteLine($"Name: {_player.Name}");
             Console.WriteLine("Alter: 18.");
             Console.WriteLine("Größe: 1,74m.");
             Console.WriteLine("Beruf: Schüler.");
             ConsoleText.Continue();
-
-            
-
         }
             
-
-        
-
         /// <summary>
         /// Prologue text
         /// </summary>

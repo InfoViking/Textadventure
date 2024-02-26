@@ -1,5 +1,8 @@
 ﻿using Textadventure;
 
+/// <summary>
+/// Entrypoint of application
+/// </summary>
 public static class Program
 {
     public static void Main()
@@ -31,13 +34,6 @@ public static class Program
         
         Epilogue epilogue = new Epilogue(player);
         epilogue.Beginning();
-        
-        
-        
-        
-        
-
-
     }
 }
 

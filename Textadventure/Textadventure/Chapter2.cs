@@ -1,5 +1,8 @@
 ﻿namespace Textadventure
 {
+    /// <summary>
+    /// Consstructor Player Class
+    /// </summary>
     internal class Chapter2
     {
         Player _player;
@@ -30,7 +33,7 @@
             Console.WriteLine($"{_player.Name}: Was für eine Barberei. Wenn ich versuche hier einfach durchzulaufen wird es mir nicht anders ergehen. ");
             ConsoleText.Continue();
 
-
+            ///Achievement: Goatmaster löst aus
             if (_player.IsGoatMaster)
             {
                 Console.WriteLine("Dein neuer Begleiter schreitet unbeirrt voran.\n " +
@@ -46,7 +49,7 @@
                 return;
             }
 
-
+            ///Labyrinth Rätsel Aufbau
             Console.WriteLine("Nach langem grübeln fällt dir ein Pflock auf, der ein wenig abseits steht.\n" +
                 "Es scheint etwas eingeritzt worden zu sein.\n");
             ConsoleText.Continue();
@@ -65,22 +68,21 @@
             Console.WriteLine("Nachdem du dir die Nachricht ausgiebig eingeprägt hast setzt du deinen Weg fort. \n");
             ConsoleText.Continue();
 
+            // Ansammlung Informationen für Labyrinthrätsel 
             List<ConsoleKey> pressedkeys = GetLabyrinthKeys();
             List<ConsoleKey> correctkeys = CorrectLabyrinthKeys();
             int multiplier = CountFailures(pressedkeys,correctkeys);
             int calculator = DamageCalculator(multiplier);
             _player.CalculateHealthpoints(-calculator);
 
+            // Game Over Bildschirm Ausgabe
             if (_player.HealthPoints <= 0 )
             {
                 Gameover.GameOver("Dein Mangel an Orientierung wird dir zum Verhängis. Nach einem knacken gibt der Boden nach\n" +
                     "und du fällst in eine Fallgrube voller spitzer Pfähle.");
             }
 
-            
-            
-
-
+            // Schadensmultiplikator Ausführung
             if (multiplier > 0)
             {
                 Wrongchoices(multiplier, calculator);
@@ -89,12 +91,12 @@
             {
                 Rightchoices();
             }
-
-            
         }
 
-
-
+        /// <summary>
+        /// get User submission for Labyrinth
+        /// </summary>
+        /// <returns></returns>
         internal List<ConsoleKey> GetLabyrinthKeys()
         {
             List<ConsoleKey> pressedkeys = new List<ConsoleKey>();
@@ -112,7 +114,10 @@
             return pressedkeys;
         }
 
-       
+        /// <summary>
+        /// List of the correct Inputs for Labyrinth
+        /// </summary>
+        /// <returns>Correct Keys</returns>
         internal List<ConsoleKey> CorrectLabyrinthKeys()
         { //Correct Inputs: 2xV, 1xR, 2xV, 2xL, 3xV
 
@@ -127,10 +132,16 @@
             correctkeys.Add(ConsoleKey.UpArrow);
             correctkeys.Add(ConsoleKey.UpArrow);
             correctkeys.Add(ConsoleKey.UpArrow);
-
+            
             return correctkeys;
         }
 
+        /// <summary>
+        /// Counts the wrong Inputs 
+        /// </summary>
+        /// <param name="userInput">List of used Keys</param>
+        /// <param name="correctInput">List of correct Keys</param>
+        /// <returns></returns>
         internal int CountFailures(List<ConsoleKey> userInput, List<ConsoleKey> correctInput)
         {
             int multiplier = 0;
@@ -144,24 +155,29 @@
             }
 
             return multiplier;
-
         }
 
+        /// <summary>
+        /// Calculates the Final damage 
+        /// </summary>
+        /// <param name="multiplier"></param>
+        /// <param name="damage"></param>
+        /// <returns></returns>
         internal int DamageCalculator(int multiplier, int damage = 2)
         {
             int damageMultiplier = multiplier * damage;
             return damageMultiplier;
         } 
 
-        
-        
+        /// <summary>
+        /// query correct/wrong Inputs
+        /// </summary>
+        /// <param name="multiplier"></param>
+        /// <param name="damage"></param>
         internal void Wrongchoices(int multiplier, int damage)
         {
             Console.WriteLine($@"Dein überragender Intellekt ließ dich {multiplier} mal im Stich.
                  Du erhälst {damage} Schaden. Angeschlagen setzt du deine Reise weiter fort.");
-
-            
-
         }
         
         internal void Rightchoices()
@@ -169,8 +185,5 @@
             Console.WriteLine("Dein überragender Intellekt sorgte dafür, dass du in der Lage warst, das Labyrinth unbeschadet zu durchqueren.\n " +
                 "Du setzt deine Reise weiter fort.");
         }
-
-        
     }
-    
 }

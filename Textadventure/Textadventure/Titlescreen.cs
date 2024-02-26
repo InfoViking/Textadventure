@@ -2,11 +2,13 @@
 
 namespace Textadventure
 {
+    /// <summary>
+    /// Startingscreen method
+    /// </summary>
     internal static class Titlescreen
     {
         internal static void StartingScreen()
         {
-            
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine("The Other Way Home\n" +

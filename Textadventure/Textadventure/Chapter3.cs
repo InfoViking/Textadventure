@@ -1,5 +1,8 @@
 ﻿namespace Textadventure
 {
+    /// <summary>
+    /// Constructor Player
+    /// </summary>
     internal class Chapter3
     {
         Player _player;
@@ -7,6 +10,10 @@
         {
             _player = player;
         }
+
+        /// <summary>
+        /// Intro Chapter 3
+        /// </summary>
         internal void Beginning()
         {
             Console.BackgroundColor = ConsoleColor.Red;
@@ -29,9 +36,12 @@
                 "2 = Energydrink trinken (10HP)\n");
 
             ConsoleText.Continue();
-
         }
 
+        /// <summary>
+        /// Query Rest/Drink
+        /// </summary>
+        /// <param name="player"></param>
         internal void RestOrDrink(Player player)
         {
             bool isCorrectInput = false;
@@ -58,8 +68,11 @@
             }
         }
 
+        /// <summary>
+        /// Intro Camp
+        /// </summary>
         internal void Camp()
-        {   //implement Textscroll class
+        {   
             Console.WriteLine("Nachdem du dich ein wenig erholt hast setzt du deinen Weg weiter fort.\n" +
                 "Nach einer Weile entdeckst du den Schein eines Lagerfeuers in weiter Ferne.\n" +
                 "Im ersten Moment freust du dich über ein Zeichen von Zivilisation.\n" +
@@ -90,6 +103,9 @@
             ConsoleText.Continue();
         }
 
+        /// <summary>
+        /// Intro Battledialogue
+        /// </summary>
         internal void BattleDailogueOpening()
         {
             Console.BackgroundColor = ConsoleColor.Green;
@@ -101,11 +117,6 @@
                 "wird er seine berufliche Karriere vielleicht überdenken..\n" +
                 "Tipp: Die richtige Antwort passt inhaltlich zur Aussage des Wilderers.");
             ConsoleText.Continue();
-
-
         }
-
-        
     }
-
 }

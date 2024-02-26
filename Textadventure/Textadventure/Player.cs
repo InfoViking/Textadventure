@@ -1,5 +1,8 @@
 ﻿namespace Textadventure
 {
+    /// <summary>
+    /// Player propertys
+    /// </summary>
     internal class Player
     {
        internal int HealthPoints { get; private set; }
@@ -8,8 +11,7 @@
        internal int Age {  get; set; }
        internal int Height {  get; set; }
        internal bool IsGoatMaster { get; set; } 
-        
-        internal bool HasEnergyDrink {  get; set; }
+       internal bool HasEnergyDrink {  get; set; }
         
         internal Player()
         {
@@ -20,6 +22,10 @@
             
         }
 
+        /// <summary>
+        /// Healthpoint Management
+        /// </summary>
+        /// <param name="healthpointsDifference"></param>
         internal void CalculateHealthpoints(int healthpointsDifference )
         {
             HealthPoints += healthpointsDifference;
@@ -35,25 +41,27 @@
             } 
         }
 
-       
-
+        /// <summary>
+        /// DialoguePoints Management for Battle Class / Chapter 3
+        /// </summary>
+        /// <param name="dialoguepointsNumber"></param>
         internal void CalculateDialoguepoints(int dialoguepointsNumber)
         {
             DialoguePoints += dialoguepointsNumber;
         }
 
+        /// <summary>
+        /// query Rest/Drink
+        /// </summary>
         internal void Rest()
         {
             const int healingRest = 5;
             CalculateHealthpoints(healingRest);
             Console.WriteLine($"Die Rast tat deinen müden Knochen gut. Du regeneriest {healingRest} Healthpoints ");
-
-
         }
 
         internal void UseEnergyDrink()
         {
-            
             const int healingDrink = 10;
             CalculateHealthpoints(healingDrink);
             Console.WriteLine($"Der Energydrink läuft deine Kehle hinunter. Du spürst wie er deinen Körper und Geist belebt. \n" +
@@ -61,14 +69,5 @@
 
             HasEnergyDrink = false;
         }
-
-
-
-
-
-
-
-
-
     }
 }

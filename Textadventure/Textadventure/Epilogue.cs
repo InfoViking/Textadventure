@@ -1,5 +1,8 @@
 ﻿namespace Textadventure
 {
+    /// <summary>
+    /// Constructor Player class
+    /// </summary>
     internal class Epilogue
     {
         Player _player;
@@ -7,6 +10,10 @@
         {
             _player = player;
         }
+
+        /// <summary>
+        /// Intro Epilogue
+        /// </summary>
         internal void Beginning()
         {
             Console.BackgroundColor = ConsoleColor.Red;
@@ -39,6 +46,7 @@
                 "1 = Energydrink trinken\n" +
                 "2 = sofort zum Arzt gehen");
 
+            //query Usedrink / go to Doctor
             bool isCorrectInput = false;
 
 
@@ -70,6 +78,9 @@
             }
         }
 
+        /// <summary>
+        /// Good/Bad Ending
+        /// </summary>
         internal void GoToDoctor()
         {
             Console.WriteLine("Du machst dich auf den Weg zum Arzt.\n" +
@@ -87,7 +98,6 @@
                     "Du glaubst dabei eine Mischung aus Unglaube und Stolz in ihren Gesichtern zu erkennen.\n" +
                     "Zu guter letzt wird dir ein wahres Festmahl zubereitet damit du wieder zu Kräften kommst,");
             }
-
             else
             {
                 Console.WriteLine("Diagnose: Der Arzt betet dir eine Liste an Verletzungen runter inklusive der Behandlungen die nötig sein werden,\n" +
@@ -103,6 +113,5 @@
                     "aufzukommen. Du verbringst deine nächsten 3 Ferien mit Aushilfsjobs und Hausarbeiten zur Tilgung deiner Schulden.");
             }
         }
-
     }
 }

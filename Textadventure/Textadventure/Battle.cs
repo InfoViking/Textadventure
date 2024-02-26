@@ -1,5 +1,8 @@
 ﻿namespace Textadventure
 {
+    /// <summary>
+    /// Constructor player class
+    /// </summary>
     internal class Battle
     {
         Player _player;
@@ -7,6 +10,10 @@
         {
             _player = player;
         }
+
+        /// <summary>
+        /// Battledialogue query / 3 choices
+        /// </summary>
         public void BattleDialogue1()
         {
             Console.WriteLine("Wilderer: Du bist wohl Lebensmüde?!\n");
@@ -119,8 +126,7 @@
                     isCorrectInput = true;
                 }
             }
-
-            Console.Clear();
+                    Console.Clear();
         }
 
         public void BattleDialogue3()
@@ -177,7 +183,7 @@
                 }
             }
 
-            Console.Clear();
+                    Console.Clear();
         }
 
         public void BattleDialogue4()
@@ -230,11 +236,12 @@
                     isCorrectInput = true;
                 }
             }
-
-            Console.Clear();
-
+                    Console.Clear();
         }
 
+        /// <summary>
+        /// Dialogue results/ Achievement´"Mindchanger" yes/no
+        /// </summary>
         internal void Dialogueresult()
         {
             if (_player.DialoguePoints < 15)
@@ -250,11 +257,6 @@
                     Gameover.GameOver("Die Scham über deine Niederlage lässt dein Herz verkrampfen. Du stirbst noch an Ort und Stelle.");
                 }
                     
-
-
-
-
-                
             }
             else if (_player.DialoguePoints >= 15)
             {
@@ -271,8 +273,6 @@
                 Console.ResetColor();
                 Console.Clear();
             }
-
-            
         }
     }
 }

@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Textadventure
 {
+    /// <summary>
+    /// helper class: Game Over Screen
+    /// </summary>
     internal class Gameover
     {
-
         internal static void GameOver(string deathReason)
         {
             Console.WriteLine(deathReason);
@@ -18,9 +20,6 @@ namespace Textadventure
             ConsoleText.Continue();
             Program.Main();
             Environment.Exit(0);
-
-
-
         }
     }
 }
