@@ -36,15 +36,7 @@
                 "Glücklicherweise weißt du, dass sich ein Arzt ganz in der Nähe befindet.\n");
             ConsoleText.Continue();
 
-            Console.BackgroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.Black;
-
-            Console.WriteLine("Hinweis: Du wirst gleich den Arzt erreichen.\n" +
-                "Dort wird sich herausstellen ob du achtsam genug warst und welches Ende dich erwartet.\n" +
-                "Du hast die Möglichkeit den Energydrink zu trinken, falls du ihn nicht schon getrunken hast,\n" +
-                "um 10HP zu regenerieren.\n" +
-                "1 = Energydrink trinken\n" +
-                "2 = sofort zum Arzt gehen");
+            
 
             //query Usedrink / go to Doctor
             bool isCorrectInput = false;
@@ -52,6 +44,16 @@
 
             while (isCorrectInput == false)
             {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Hinweis: Du wirst gleich den Arzt erreichen.\n" +
+                    "Dort wird sich herausstellen ob du achtsam genug warst und welches Ende dich erwartet.\n" +
+                    "Du hast die Möglichkeit den Energydrink zu trinken, falls du ihn nicht schon getrunken hast,\n" +
+                    "um 10HP zu regenerieren.\n" +
+                    "1 = Energydrink trinken\n" +
+                    "2 = sofort zum Arzt gehen");
+
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
 
@@ -65,6 +67,13 @@
 
                 if (convertedChoice == 1)
                 {
+                    if (_player.HasEnergyDrink == false)
+                    {
+                        Console.WriteLine("Du hast deinen Energydrink bereits verwendet");
+                        ConsoleText.Continue();
+
+                        continue;
+                    }
                     _player.UseEnergyDrink();
                     Console.ReadLine();
                     GoToDoctor();
@@ -86,14 +95,16 @@
             Console.WriteLine("Du machst dich auf den Weg zum Arzt.\n" +
                 "Entgegen aller Erwartungen kommst du sofort dran.\n" +
                 "Der Arzt beginnt seine Untersuchung.");
+            ConsoleText.Continue();
 
             if ( _player.HealthPoints >= 10)
             {
                 Console.WriteLine("Diagnose: Du scheinst dich einer guten Gesundheit zu erfreuen.\n" +
                     "Der Arzt empfiehlt dir, dich ein paar Tage zu schonen.\n" +
                     "Glücklich über die guten Nachrichten verlässt du die Arztpraxis und läufst auf dem schnellsten Weg nach Hause. \n" +
-                    "Dort angekommen öffnen dir deine Eltern die Tür.\n" +
-                    "In Tränen ausbrechend, schließen sie dich in ihre Arme.\n" +
+                    "Dort angekommen öffnen dir deine Eltern die Tür.");
+                ConsoleText.Continue();
+                Console.WriteLine("In Tränen ausbrechend, schließen sie dich in ihre Arme.\n" +
                     "Nach einer Dusche und einem Klamottenwechsel erzählst du deinen Eltern von deinem Abenteuer.\n" +
                     "Du glaubst dabei eine Mischung aus Unglaube und Stolz in ihren Gesichtern zu erkennen.\n" +
                     "Zu guter letzt wird dir ein wahres Festmahl zubereitet damit du wieder zu Kräften kommst,");

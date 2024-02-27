@@ -8,10 +8,11 @@ public static class Program
     public static void Main()
     {
         Titlescreen.StartingScreen();
-        
-         Player player = Prologue.Character();
-        
+
+        Player player = Prologue.Character();
+
         Prologue prologue = new Prologue(player);
+        prologue.CharacterDetails(player.Name);
         prologue.Intro();
 
         Chapter1 chapter1 = new Chapter1(player);

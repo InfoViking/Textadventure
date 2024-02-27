@@ -7,9 +7,9 @@
     {
         internal static void Continue()
         {
+            Console.ResetColor();
             Console.WriteLine("\nDrücke Enter zum Fortfahren");
             Console.ReadLine();
-            Console.ResetColor();
             Console.Clear();
         }
     }

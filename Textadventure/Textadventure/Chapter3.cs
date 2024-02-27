@@ -1,4 +1,8 @@
-﻿namespace Textadventure
+﻿using System.Numerics;
+using System.Reflection.Metadata.Ecma335;
+using Textadventure;
+
+namespace Textadventure
 {
     /// <summary>
     /// Constructor Player
@@ -24,54 +28,71 @@
 
             Console.WriteLine("Nach dieser nervenaufreibenden Erfahrung fühlst du, wie sich Erschöpfung in dir breit macht.\n" +
                 "Du beschließt eine kurze Rast einzulegen. Du erinnerst dich an den Energydrink in deiner Tasche.\n" +
-                $"{_player.Name}: Sollte ich ihn trinken oder ihn für später aufbewahren?\n");
+               $"{_player.Name}: Sollte ich ihn trinken oder ihn für später aufbewahren?\n");
 
-            Console.BackgroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.Black;
-
-            Console.WriteLine("Hinweis:Du legst eine Rast ein. Diese stellt 5 Healthpoints wieder her.\n" +
-                "Der Energydrink stellt 10 Healthpoints wieder her.\n " +
-                "Ob du ihn jetzt oder zu einem späteren Zeitpunkt nutzt bleibt dir überlassen\n" +
-                "1 = Rasten (5HP)\n" +
-                "2 = Energydrink trinken (10HP)\n");
-
-            ConsoleText.Continue();
+            ConsoleText.Continue(); 
+            RestOrDrink();
         }
 
         /// <summary>
         /// Query Rest/Drink
         /// </summary>
-        /// <param name="player"></param>
-        internal void RestOrDrink(Player player)
+        internal void RestOrDrink()
         {
+            
+
+
             bool isCorrectInput = false;
 
             while (isCorrectInput == false)
             {
-                int choice = Convert.ToInt32(Console.ReadLine());
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
 
-                if (choice == 1)
-                {
-                    player.Rest();
-                    isCorrectInput = true;
-                }
-                else if (choice == 2)
-                {
-                    player.UseEnergyDrink();
-                    isCorrectInput = true;
-                }
-                else
+                Console.WriteLine("Hinweis:Du legst eine Rast ein. Diese stellt 5 Healthpoints wieder her.\n" +
+                    "Der Energydrink stellt 10 Healthpoints wieder her.\n " +
+                    "Ob du ihn jetzt oder zu einem späteren Zeitpunkt nutzt bleibt dir überlassen\n" +
+                    "1 = Rasten (5HP)\n" +
+                    "2 = Energydrink trinken (10HP)\n");
+
+                Console.ResetColor();
+
+                string choice = Console.ReadLine();
+                int convertedChoice = 0;
+
+                if (!int.TryParse(choice, out convertedChoice))
                 {
                     Console.WriteLine("Bitte nutzen sie die vorgegebenen Eingabetasten.");
-                    ConsoleText.Continue();
+                    Console.ReadLine();
+                    Console.Clear();
+
+                    continue;
                 }
+
+                if (convertedChoice == 1)
+                {
+                    _player.Rest();
+                    Console.ReadLine();
+
+                    isCorrectInput = true;
+                }
+                else if (convertedChoice == 2)
+                {
+                    _player.UseEnergyDrink();
+                    Console.ReadLine();
+
+                    isCorrectInput = true;
+                }
+
             }
         }
 
-        /// <summary>
-        /// Intro Camp
-        /// </summary>
-        internal void Camp()
+
+
+/// <summary>
+/// Intro Camp
+/// </summary>
+internal void Camp()
         {   
             Console.WriteLine("Nachdem du dich ein wenig erholt hast setzt du deinen Weg weiter fort.\n" +
                 "Nach einer Weile entdeckst du den Schein eines Lagerfeuers in weiter Ferne.\n" +
@@ -111,11 +132,12 @@
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.WriteLine("Hinweis: Nun ist es an der Zeit dein lyrisches Talent abzurufen.\n " +
+            Console.WriteLine("Hinweis: Nun ist es an der Zeit dein lyrisches Talent abzurufen.\n" +
                 "In folgendem Dialog gilt es die richtige Antwort auf die Kommentare des Wilderers zu finden.\n" +
                 "Wenn du es schaffst mindestens 3 schlagfertige Antworten zu geben,\n" +
                 "wird er seine berufliche Karriere vielleicht überdenken..\n" +
                 "Tipp: Die richtige Antwort passt inhaltlich zur Aussage des Wilderers.");
+
             ConsoleText.Continue();
         }
     }

@@ -58,7 +58,7 @@ namespace Textadventure
                 "Der rechte Weg sieht, im Vergleich, deutlich besser aus. Allerdings bemerkst du auf dem Boden Fußspuren.\n" +
                 "Als du sie genauer untersuchst stellst du fest, dass diese Fußspuren definitiv nicht von Menschen stammen.\n" +
                 "Du kannst sie keinem Tier zuordnen. Je länger du sie untersuchst desto unwohler fühlst du dich.\n");
-
+            ConsoleText.Continue();
             Decision1();
         }
 
@@ -67,15 +67,17 @@ namespace Textadventure
         /// </summary>
         internal void Decision1()
         {
-            Console.WriteLine($"{_player.Name}: Jeder der Wege hat seine Unsicherheiten. Aber ich muss weiter. Zurückgehen ist keine Option \n" +
-                "Ich entscheide mich für...\n" +
-                "1 = Linker Weg\n" +
-                "2 = Rechter Weg\n");
+            
 
             bool isCorrectInput = false;
 
                 while (isCorrectInput == false)
             {
+                Console.WriteLine($"{_player.Name}: Jeder der Wege hat seine Unsicherheiten. Aber ich muss weiter. Zurückgehen ist keine Option \n" +
+                "Ich entscheide mich für...\n" +
+                "1 = Linker Weg\n" +
+                "2 = Rechter Weg\n");
+
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
 
@@ -91,17 +93,19 @@ namespace Textadventure
                 if (convertedChoice == 1)
                 {
                     Leftway();
-                    Console.ReadLine();
-                    
+                    ConsoleText.Continue();
+
                     isCorrectInput = true;
                 }
                 else if (convertedChoice == 2)
                 {
                     Rightway();
-                    Console.ReadLine();
-                    
+                    ConsoleText.Continue();
+
                     isCorrectInput = true;
                 }
+
+                
             }
         }
 
@@ -117,8 +121,13 @@ namespace Textadventure
             Console.WriteLine("Und es kam wie es kommen musste. Nach einem Moment der Unachtsamkeit trittst du\n" +
                 "ins Leere und fällst mit dem Gesicht vorran in einen Dornenbusch.\n" +
                 "Du spürst wie die Dornen sich in deine Haut arbeiten und kleine Kratzer hinterlassen.\n" +
-                "Außerdem spürst du einen leichten Schmerz in deinem linken Knöchel.\n" +
-                "Du erleidest 5 Schaden\n");
+                "Außerdem spürst du einen leichten Schmerz in deinem linken Knöchel.");
+
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.WriteLine("Du erleidest 5 Schaden\n");
+            ConsoleText.Continue();
 
             _player.CalculateHealthpoints(-5);
 
@@ -134,23 +143,28 @@ namespace Textadventure
                 "Du setzt deine Reise auf dem rechten Pfad fort\n");
             ConsoleText.Continue();
             Console.WriteLine("Während du den Weg beschreitest macht sich Paranoia in dir breit.\n" +
-                "Jedes Geräusch lässt dich zusammen zucken.\n " +
-                "Du spürst wie dich jemand oder etwas beobachtet. Plötzlich springt etwas vor dir aus dem Gebüsch.\n ");
+                "Jedes Geräusch lässt dich zusammenzucken.\n" +
+                "Du spürst wie dich jemand oder etwas beobachtet. Plötzlich springt etwas vor dir aus dem Gebüsch.\n");
             ConsoleText.Continue();
             Console.WriteLine("Panisch reißt du die Taschenlampe deines Handys hoch und richtest sie auf das Biest.\n" +
                 "Du starst direkt in die Augen eines Ziegenbocks. \n" +
-                "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist.\n " +
+                "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist.\n" +
                 "Andererseits schwingt auch ein wenig Ärger mit\n" +
                 "da es eine Ziege geschafft hat dir Todesangst einzujagen \n");
             ConsoleText.Continue();
-            Console.WriteLine("Du entscheidest dich den Ziegenbock zu...\n" +
-                "1 = Streicheln\n" +
-                "2 = Verjagen\n");
+            Decision2();
 
+        }
+        internal void Decision2()
+        {
             bool isCorrectInput = false;
 
             while (isCorrectInput == false)
             {
+                Console.WriteLine("Du entscheidest dich den Ziegenbock zu...\n" +
+                "1 = Streicheln\n" +
+                "2 = Verjagen\n");
+
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
 
@@ -177,46 +191,55 @@ namespace Textadventure
 
                     isCorrectInput = true;
                 }
+
             }
-        }
+        }    
+                
+            
+        
 
         /// <summary>
         /// follow up choices
         /// </summary>
         internal void Pet()
         {
-            Console.WriteLine("Du kniest dich hin und streckst deinen Arm aus.\n " +
+            Console.WriteLine("Du kniest dich hin und streckst deinen Arm aus.\n" +
                 "Vorsichtig aber neugierig nähert sich der Ziegenbock bis er deine Hand erreicht. \n" +
-                "Du streichselst ihm über den Kopf, was er mit einem fröhlichen Määääh quitiert.\n " +
+                "Du streichselst ihm über den Kopf, was er mit einem fröhlichen Määääh quitiert.\n" +
                 "Als du dich aufrichtest und weiter gehen willst scheint \n" +
                 "es als würde der Ziegenbock dir folgen\n");
             ConsoleText.Continue();
-            Console.WriteLine($"{_player.Name}: Scheinst wohl auch von hier weg zu wollen. Mir solls Recht sein.\n " +
+            Console.WriteLine($"{_player.Name}: Scheinst wohl auch von hier weg zu wollen. Mir solls Recht sein.\n" +
                 $"Ein bisschen Gesellschaft tut uns beiden gut.\n");
 
             Console.BackgroundColor = ConsoleColor.Yellow;
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Achievement unlocked: Goatmaster");
-            Console.Clear();
+            
 
             _player.IsGoatMaster = true;
         }
 
         internal void Scare()
         {
-            Console.WriteLine("Du bäumst dich auf und stößt einen ,deiner Meinung nach, markerschütternden Schrei aus.\n " +
+            Console.WriteLine("Du bäumst dich auf und stößt einen ,deiner Meinung nach, markerschütternden Schrei aus.\n" +
                 "Der Ziegenbock zeigt sich davon allerdings nur wenig beeindruckt, nimmt Anlauf und\n" +
-                "rammt dich mit seinen Hörnern zu Boden. Seinen Sieg über dich quittiert er mit einem Määäh\n " +
-                "und entschwindet in die Dunkelheit.\n" +
-                "Du erhälst 10 Schaden. ");
+                "rammt dich mit seinen Hörnern zu Boden. Seinen Sieg über dich quittiert er mit einem Määäh\n" +
+                "und entschwindet in die Dunkelheit.");
+
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.WriteLine("Du erleidest 10 Schaden\n");
+            ConsoleText.Continue();
 
             _player.CalculateHealthpoints(-10);
 
-            ConsoleText.Continue();
+            
             Console.WriteLine("Nachdem der Schmerz etwas nachlässt und du die Tatsache verarbeitet hast,\n" +
                 "dass dich eine Ziege besiegt hat setzt du deinen Weg mit gekränktem Ego fort");
-            Console.Clear();
+            
         }
     }
 }

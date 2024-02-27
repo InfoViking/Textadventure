@@ -23,7 +23,7 @@
                 "Als es dich bemerkt rennt es schnurstracks in Richtung der Pflöcke.\n" +
                 "Kurz darauf hörst du ein metallisches Geräusch, gefolgt von einem schmerzerfüllten Schrei des Rehs.\n" +
                 "Danach... Stille.\n");
-            Console.ReadLine();
+            ConsoleText.Continue();
             Console.WriteLine("Dir wird schlagartig heiß und kalt. Du versuchst mit der Taschenlampe zu sehen was passiert ist.\n" +
                 "Hättest du es doch besser gelassen.\n" +
                 "Der gesamte Bereich ist übersäht mit Tierkadavern. Du versuchst nicht laut loszuschreien.\n" +
@@ -45,6 +45,7 @@
                     "Die Ziege entdeckt einen Strauch mit Heidelbeeren und macht sich direkt darüber her.\n" +
                     "Sie macht keine Anstalten dir weiterhin folgen zu wollen\n" +
                     "Schweren Herzens setzt du deine Reise alleine fort\n");
+                ConsoleText.Continue();
 
                 return;
             }
@@ -106,6 +107,7 @@
                 ConsoleKeyInfo keypressed = Console.ReadKey();
                 string keystring = keypressed.Key.ToString();
                 string key = keystring.Substring(0, keystring.Length - 5);
+                // Dictionary
 
                 Console.WriteLine($"{key}");
                 
@@ -176,14 +178,24 @@
         /// <param name="damage"></param>
         internal void Wrongchoices(int multiplier, int damage)
         {
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Black;
+
             Console.WriteLine($@"Dein überragender Intellekt ließ dich {multiplier} mal im Stich.
-                 Du erhälst {damage} Schaden. Angeschlagen setzt du deine Reise weiter fort.");
+                Du erhälst {damage} Schaden. Angeschlagen setzt du deine Reise weiter fort.");
+
+            ConsoleText.Continue();
         }
         
         internal void Rightchoices()
         {
-            Console.WriteLine("Dein überragender Intellekt sorgte dafür, dass du in der Lage warst, das Labyrinth unbeschadet zu durchqueren.\n " +
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.WriteLine("Dein überragender Intellekt sorgte dafür, dass du in der Lage warst, das Labyrinth unbeschadet zu durchqueren.\n" +
                 "Du setzt deine Reise weiter fort.");
+
+            ConsoleText.Continue();
         }
     }
 }

@@ -57,17 +57,26 @@
         {
             const int healingRest = 5;
             CalculateHealthpoints(healingRest);
-            Console.WriteLine($"Die Rast tat deinen müden Knochen gut. Du regeneriest {healingRest} Healthpoints ");
+
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine($"Die Rast tut deinen müden Knochen gut. Du regeneriest {healingRest} Healthpoints ");
+            ConsoleText.Continue();
+
         }
 
         internal void UseEnergyDrink()
         {
             const int healingDrink = 10;
             CalculateHealthpoints(healingDrink);
+
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine($"Der Energydrink läuft deine Kehle hinunter. Du spürst wie er deinen Körper und Geist belebt. \n" +
                               $"Du regenerierst {healingDrink} Healthpoints ");
-
+            
             HasEnergyDrink = false;
+            ConsoleText.Continue();
         }
     }
 }
