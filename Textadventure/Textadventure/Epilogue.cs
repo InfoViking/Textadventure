@@ -16,23 +16,23 @@
         /// </summary>
         internal void Beginning()
         {
-            Console.BackgroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Zivilisation");
             ConsoleText.Continue();
             Console.WriteLine("Nach einer gefühlten Ewigkeit des Laufens und nachdem du schon mehrfach sämtliche Hoffnung verloren hast\n" +
                 "je wieder aus diesem Wald zu kommen, siehst du in der Ferne etwas aufleuchten.\n" +
-                "Als deine müden Augen erkennen um was es sich handelt trifft es dich wie ein Blitz\n");
+                "Als deine müden Augen erkennen um was es sich handelt trifft es dich wie ein Blitz.\n");
             ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}: Ich werd verrückt... das sind die Scheinwerfer eines Autos. Und das bedeutet...\n" +
-            "Noch bevor du deinen Gedanken beendest läufst du so schnell dich deine müden Beine tragen in Richtung der Straße\n");
+            "Noch bevor du deinen Gedanken beendest, läufst du so schnell dich deine müden Beine tragen in Richtung der Straße\n");
             ConsoleText.Continue();
             Console.WriteLine("Und tatsächlich. Du brichst durch die letzten Büsche und stehst auf einer Landstraße.\n" +
                 "Als du dich umsiehst erkennst du einige Gebäude wieder und weißt, seit einer Ewigkeit wieder, wo du dich befindest.\n" +
                 "Es ist eine der Landstraßen die sich um deine Heimatstadt ziehen.\n" +
                 "Du möchtest am liebsten schnellstmöglich nach Hause und deine Eltern umarmen.\n" +
-                "Jedoch hälst du es für vernünftiger zuerst einen Arzt aufzusuchen.\n" +
+                "Jedoch hällst du es für vernünftiger zuerst einen Arzt aufzusuchen.\n" +
                 "Glücklicherweise weißt du, dass sich ein Arzt ganz in der Nähe befindet.\n");
             ConsoleText.Continue();
 
@@ -101,13 +101,13 @@
             {
                 Console.WriteLine("Diagnose: Du scheinst dich einer guten Gesundheit zu erfreuen.\n" +
                     "Der Arzt empfiehlt dir, dich ein paar Tage zu schonen.\n" +
-                    "Glücklich über die guten Nachrichten verlässt du die Arztpraxis und läufst auf dem schnellsten Weg nach Hause. \n" +
+                    "Glücklich über die guten Nachrichten, verlässt du die Arztpraxis und läufst auf dem schnellsten Weg nach Hause. \n" +
                     "Dort angekommen öffnen dir deine Eltern die Tür.");
                 ConsoleText.Continue();
                 Console.WriteLine("In Tränen ausbrechend, schließen sie dich in ihre Arme.\n" +
                     "Nach einer Dusche und einem Klamottenwechsel erzählst du deinen Eltern von deinem Abenteuer.\n" +
                     "Du glaubst dabei eine Mischung aus Unglaube und Stolz in ihren Gesichtern zu erkennen.\n" +
-                    "Zu guter letzt wird dir ein wahres Festmahl zubereitet damit du wieder zu Kräften kommst,");
+                    "Zu guter Letzt wird dir ein wahres Festmahl zubereitet, damit du wieder zu Kräften kommst,");
             }
             else
             {

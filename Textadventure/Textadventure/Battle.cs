@@ -23,10 +23,10 @@
 
             while (isCorrectInput == false)
             {
-                Console.WriteLine("Wilderer: Du bist wohl Lebensmüde?!\n");
-                Console.WriteLine("1 = Jetzt, wo ich dich sehe, fällt mir ein, dass ich noch den Müll rausbringen muss. \n" +
-                                  "2 = Wenn ich mich umbringen wollte, würde ich dein Ego erklimmen und zu deinem IQ springen. \n" +
-                                  "3 = Ganz unbrauchbar bist du nicht, man kann dich immer noch als schlechtes Beispiel benutzen \n");
+                Console.WriteLine("Wilderer: Du bist wohl Lebensmüde?!\n" +
+                    "1 = Jetzt, wo ich dich sehe, fällt mir ein, dass ich noch den Müll rausbringen muss.\n" +
+                    "2 = Wenn ich mich umbringen wollte, würde ich dein Ego erklimmen und zu deinem IQ springen. \n" +
+                    "3 = Ganz unbrauchbar bist du nicht, man kann dich immer noch als schlechtes Beispiel benutzen \n");
 
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
@@ -83,10 +83,10 @@
 
             while (isCorrectInput == false)
             {
-                Console.WriteLine("Wilderer: Wir schützen die Menschen vor den bösartigen Tieren des Waldes.\n");
-                Console.WriteLine("1 = Du bist wie eine Wolke. Wenn du verschwindest, wird es ein schöner Tag.\n" +
-                                  "2 = Du bist so enttäuschend wie eine ungesalzene Brezel.\n" +
-                                  "3 = Die wahren Helden sind die Menschen, die dich jeden Tag tolerieren müssen.\n");
+                Console.WriteLine("Wilderer: Wir schützen die Menschen vor den bösartigen Tieren des Waldes.\n" +
+                    "1 = Du bist wie eine Wolke. Wenn du verschwindest, wird es ein schöner Tag.\n" +
+                    "2 = Du bist so enttäuschend wie eine ungesalzene Brezel.\n" +
+                    "3 = Die wahren Helden sind die Menschen, die dich jeden Tag tolerieren müssen.\n");
 
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
@@ -141,10 +141,10 @@
 
             while (isCorrectInput == false)
             {
-                Console.WriteLine("Wilderer:Meiner Meinung nach sind Tiere nur dazu da um Geld zu verdienen.\n");
-                Console.WriteLine("1 = Du solltest eine Pflanze mit dir herumtragen, um den Sauerstoff zu ersetzen, den du verschwendest.\n" +
-                                  "2 = Das ist aber ganz schön viel Meinung für so wenig Ahnung.\n" +
-                                  "3 = Wenn Genialität eine Generation überspringt, dann werden deine Kinder brillant.\n");
+                Console.WriteLine("Wilderer:Meiner Meinung nach sind Tiere nur dazu da um Geld zu verdienen.\n" +
+                     "1 = Du solltest eine Pflanze mit dir herumtragen, um den Sauerstoff zu ersetzen, den du verschwendest.\n" +
+                     "2 = Das ist aber ganz schön viel Meinung für so wenig Ahnung.\n" +
+                     "3 = Wenn Genialität eine Generation überspringt, dann werden deine Kinder brillant.\n");
 
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
@@ -200,10 +200,10 @@
 
             while (isCorrectInput == false)
             {
-                Console.WriteLine("Du wirst gleich herausfinden wie mein Stiefel schmeckt.\n");
-                Console.WriteLine("1 = Zwei IQ-Punkte weniger und du bräuchtest Schuhe mit Klettverschluss.\n" +
-                                  "2 = Ist es nicht gefährlich, wenn du dein ganzes Vokabular in einem Satz benutzt?\n" +
-                                  "3 = Du bist der Beweis, dass die Evolution auch rückwärts funktioniert.\n");
+                Console.WriteLine("Du wirst gleich herausfinden wie mein Stiefel schmeckt!\n" +
+                    "1 = Zwei IQ-Punkte weniger und du bräuchtest Schuhe mit Klettverschluss.\n" +
+                    "2 = Ist es nicht gefährlich, wenn du dein ganzes Vokabular in einem Satz benutzt?\n" +
+                    "3 = Du bist der Beweis, dass die Evolution auch rückwärts funktioniert.\n");
 
                 string choice = Console.ReadLine();
                 int convertedChoice = 0;
@@ -255,7 +255,7 @@
             if (_player.DialoguePoints < 15)
             {
                 Console.WriteLine("Wilderer: Jetzt reichts langsam, Kurzer.\n" +
-                    "Entweder du verschwindest jetzt aus meinem Sichtfeld, oder du leistest meiner Beute gesellschaft.\n" +
+                    "Entweder du verschwindest jetzt aus meinem Sichtfeld, oder du leistest meiner Beute Gesellschaft.\n" +
                     "Eingeschüchtert von seiner Drohung machst du auf der Stelle kehrt und verlässt das Lager.\n" +
                     "Die Schahm über deine Niederlage fügt dir körperliche Schmerzen zu\n");
 
@@ -269,7 +269,7 @@
 
                 if (_player.HealthPoints <= 0)
                 {
-                    Gameover.GameOver("Die Scham über deine Niederlage lässt dein Herz verkrampfen. Du stirbst noch an Ort und Stelle.");
+                    Gameover.GameOver("Die Schahm über deine Niederlage lässt dein Herz verkrampfen. Du stirbst noch an Ort und Stelle.");
                 }
                     
             }

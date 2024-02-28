@@ -12,7 +12,7 @@
         }
         internal void Beginning()
         {
-            Console.BackgroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Wandloses Labyrinth");
@@ -28,12 +28,12 @@
                 "Hättest du es doch besser gelassen.\n" +
                 "Der gesamte Bereich ist übersäht mit Tierkadavern. Du versuchst nicht laut loszuschreien.\n" +
                 "Nachdem du dich beruhigt hast erinnerst du dich daran, \n" +
-                "dass eine Bande Wilderer in diesem Wald ihr Unwesen treibt.\n");
+                "dass ein Wilderer in diesem Wald sein Unwesen treibt.\n");
             ConsoleText.Continue();
-            Console.WriteLine($"{_player.Name}: Was für eine Barberei. Wenn ich versuche hier einfach durchzulaufen wird es mir nicht anders ergehen. ");
+            Console.WriteLine($"{_player.Name}: Was für eine Barbarei. Wenn ich versuche hier einfach durchzulaufen wird es mir nicht anders ergehen. ");
             ConsoleText.Continue();
 
-            ///Achievement: Goatmaster löst aus
+            //Achievement: Goatmaster löst aus
             if (_player.IsGoatMaster)
             {
                 Console.WriteLine("Dein neuer Begleiter schreitet unbeirrt voran.\n " +
@@ -41,8 +41,9 @@
                     "Offenbar möchte die Ziege, dass du ihr folgst.\n" +
                    $"{_player.Name}: Ich lege mein Leben in die Hände einer Ziege. Vielleicht sollte ich meinen Kopf untersuchen lassen.\n" +
                     "Du folgst deinem Begleiter durch das Feld aus Fallen. Und tatsächlich scheint die Ziege zu wissen was sie tut.\n" +
-                    "Du kommst unbeschadet auf der anderen Seite des Hains an.\n" +
-                    "Die Ziege entdeckt einen Strauch mit Heidelbeeren und macht sich direkt darüber her.\n" +
+                    "Du kommst unbeschadet auf der anderen Seite des Hains an.");
+                ConsoleText.Continue();
+                    Console.WriteLine("Die Ziege entdeckt einen Strauch mit Heidelbeeren und macht sich direkt darüber her.\n" +
                     "Sie macht keine Anstalten dir weiterhin folgen zu wollen\n" +
                     "Schweren Herzens setzt du deine Reise alleine fort\n");
                 ConsoleText.Continue();
@@ -50,7 +51,7 @@
                 return;
             }
 
-            ///Labyrinth Rätsel Aufbau
+            //Labyrinth Rätsel Aufbau
             Console.WriteLine("Nach langem grübeln fällt dir ein Pflock auf, der ein wenig abseits steht.\n" +
                 "Es scheint etwas eingeritzt worden zu sein.\n");
             ConsoleText.Continue();
@@ -60,7 +61,7 @@
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Hinweis: Diese" +
-                " Nachricht wird dir nur einmal angezeigt.\n" +
+                "Nachricht wird dir nur einmal angezeigt.\n" +
                 "Präge dir gut ein was dort steht. Falls nicht wird es schmerzhaft.\n" +
                 "Steuerung: Pfeiltaste links = links \n" +
                            "Pfeiltaste rechts = rechts \n" +
@@ -79,7 +80,7 @@
             // Game Over Bildschirm Ausgabe
             if (_player.HealthPoints <= 0 )
             {
-                Gameover.GameOver("Dein Mangel an Orientierung wird dir zum Verhängis. Nach einem knacken gibt der Boden nach\n" +
+                Gameover.GameOver("Dein Mangel an Orientierung wird dir zum Verhängis. Nach einem Knacken gibt der Boden nach\n" +
                     "und du fällst in eine Fallgrube voller spitzer Pfähle.");
             }
 

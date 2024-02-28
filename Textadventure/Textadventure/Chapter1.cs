@@ -18,13 +18,13 @@ namespace Textadventure
         /// </summary>
         public void Beginning()
         {
-            Console.BackgroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("Der Scheideweg");
             ConsoleText.Continue();
             Console.WriteLine("Du beschließt fürs Erste dem Weg zu folgen auf dem du erwacht bist.\n" +
-                "Nach einer Weile bemerkst du vor dir ein schwaches Leuchten. Als du dich näherst,\n" +
+                "Nach einer Weile bemerkst du vor dir, ein schwaches Leuchten. Als du dich näherst,\n" +
                 "erkennst du die Lichtquelle. Erleichterung durchströmt deinen Körper.");
             ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}:Ein Handy! Ich bin gerettet!");
@@ -50,11 +50,11 @@ namespace Textadventure
                 "der dich zu Hause erwartet.\n" +                                                    
                 "Versuche gesund zu bleiben und sei vorsichtig.\n");                                 
             ConsoleText.Continue();
-            Console.WriteLine("Nachdem du sich mit den Funktionen vertraut gemacht hast setzt du deinen Weg nach Hause weiter fort.\n" +
+            Console.WriteLine("Nachdem du sich mit den Funktionen vertraut gemacht hast, setzt du deinen Weg nach Hause weiter fort.\n" +
                 "Nach einer Weile gabelt sich der Weg in zwei Richtungen. Du leuchtest mit der Taschenlampe des Handys die Wege aus.\n");
             ConsoleText.Continue();
             Console.WriteLine("Der linke Weg scheint deutlich schlechter ausgebaut zu sein. Einige Dornenranken wuchern über den Weg\n" +
-                "und Schlaglöcher bergen die Gefahr bei einem falschen Schritt deinen Knöchel zu verletzen.\n" +
+                "und Schlaglöcher bergen die Gefahr dich, bei einem falschen Schritt, zu verletzen.\n" +
                 "Der rechte Weg sieht, im Vergleich, deutlich besser aus. Allerdings bemerkst du auf dem Boden Fußspuren.\n" +
                 "Als du sie genauer untersuchst stellst du fest, dass diese Fußspuren definitiv nicht von Menschen stammen.\n" +
                 "Du kannst sie keinem Tier zuordnen. Je länger du sie untersuchst desto unwohler fühlst du dich.\n");
@@ -115,7 +115,7 @@ namespace Textadventure
         internal void Leftway()
         {
             Console.WriteLine($"{_player.Name}: Diese Tierspuren sind mir nicht geheuer.\n" +
-                $"Ich lege mich lieber mit ein paar Dornen und Schlaglöchern an als mit einer wilden Bestie.\n" +
+                $"Ich lege mich lieber mit ein paar Dornen und Schlaglöchern an, als mit einer wilden Bestie.\n" +
                 "Du setzt deine Reise auf dem linken Pfad fort.\n");
             ConsoleText.Continue();
             Console.WriteLine("Und es kam wie es kommen musste. Nach einem Moment der Unachtsamkeit trittst du\n" +
@@ -126,12 +126,12 @@ namespace Textadventure
             Console.BackgroundColor = ConsoleColor.Red;
             Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.WriteLine("Du erleidest 5 Schaden\n");
+            Console.WriteLine("Du erleidest 10 Schaden\n");
             ConsoleText.Continue();
 
-            _player.CalculateHealthpoints(-5);
+            _player.CalculateHealthpoints(-10);
 
-            Console.WriteLine("Während du dich aufrichtest schießen dir sämtliche Flüche die du kennst durch den Kopf.\n" +
+            Console.WriteLine("Während du dich aufrichtest, schießen dir sämtliche Flüche die du kennst durch den Kopf.\n" +
                 "Du klopfst dir den Schmutz vom Körper und schreitest weiter vorran.\n ");
             ConsoleText.Continue();
         }
@@ -149,7 +149,7 @@ namespace Textadventure
             Console.WriteLine("Panisch reißt du die Taschenlampe deines Handys hoch und richtest sie auf das Biest.\n" +
                 "Du starst direkt in die Augen eines Ziegenbocks. \n" +
                 "Einerseits bist du erleichtert darüber, dass es nur eine Ziege ist.\n" +
-                "Andererseits schwingt auch ein wenig Ärger mit\n" +
+                "Andererseits schwingt auch ein wenig Ärger mit,\n" +
                 "da es eine Ziege geschafft hat dir Todesangst einzujagen \n");
             ConsoleText.Continue();
             Decision2();
@@ -205,9 +205,9 @@ namespace Textadventure
         {
             Console.WriteLine("Du kniest dich hin und streckst deinen Arm aus.\n" +
                 "Vorsichtig aber neugierig nähert sich der Ziegenbock bis er deine Hand erreicht. \n" +
-                "Du streichselst ihm über den Kopf, was er mit einem fröhlichen Määääh quitiert.\n" +
-                "Als du dich aufrichtest und weiter gehen willst scheint \n" +
-                "es als würde der Ziegenbock dir folgen\n");
+                "Du streichselst ihm über den Kopf, was er mit einem fröhlichen Määääh quittiert.\n" +
+                "Als du dich aufrichtest und weitergehen willst scheint \n" +
+                "es als würde der Ziegenbock dir folgen.\n");
             ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}: Scheinst wohl auch von hier weg zu wollen. Mir solls Recht sein.\n" +
                 $"Ein bisschen Gesellschaft tut uns beiden gut.\n");
@@ -238,7 +238,7 @@ namespace Textadventure
 
             
             Console.WriteLine("Nachdem der Schmerz etwas nachlässt und du die Tatsache verarbeitet hast,\n" +
-                "dass dich eine Ziege besiegt hat setzt du deinen Weg mit gekränktem Ego fort");
+                "dass dich eine Ziege besiegt hat setzt du deinen Weg mit gekränktem Ego fort.");
             
         }
     }
