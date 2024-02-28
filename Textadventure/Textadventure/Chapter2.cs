@@ -18,7 +18,7 @@
             Console.WriteLine("Wandloses Labyrinth");
             ConsoleText.Continue();
             Console.WriteLine("Der Wald lichtet sich und du betrittst einen Hain.\n" +
-                "Als du genauer hinsiehst siehst du dutzende Pflöcke welche in den Boden getrieben wurden.\n" +
+                "Als du genauer hinsiehst, siehst du dutzende Pflöcke welche in den Boden getrieben wurden.\n" +
                 "Während du versuchst zu verstehen was es damit auf sich hat, siehst du wie ein Reh den Hain betritt.\n" +
                 "Als es dich bemerkt rennt es schnurstracks in Richtung der Pflöcke.\n" +
                 "Kurz darauf hörst du ein metallisches Geräusch, gefolgt von einem schmerzerfüllten Schrei des Rehs.\n" +
@@ -36,7 +36,7 @@
             //Achievement: Goatmaster löst aus
             if (_player.IsGoatMaster)
             {
-                Console.WriteLine("Dein neuer Begleiter schreitet unbeirrt voran.\n " +
+                Console.WriteLine("Dein neuer Begleiter schreitet unbeirrt voran.\n" +
                     "Nach ein paar Metern dreht er sich zu dir um und scheint auf dich zu warten.\n" +
                     "Offenbar möchte die Ziege, dass du ihr folgst.\n" +
                    $"{_player.Name}: Ich lege mein Leben in die Hände einer Ziege. Vielleicht sollte ich meinen Kopf untersuchen lassen.\n" +
@@ -60,7 +60,7 @@
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.WriteLine("Hinweis: Diese" +
+            Console.WriteLine("Hinweis: Diese " +
                 "Nachricht wird dir nur einmal angezeigt.\n" +
                 "Präge dir gut ein was dort steht. Falls nicht wird es schmerzhaft.\n" +
                 "Steuerung: Pfeiltaste links = links \n" +

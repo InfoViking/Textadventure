@@ -23,16 +23,16 @@
             ConsoleText.Continue();
             Console.WriteLine("Nach einer gefühlten Ewigkeit des Laufens und nachdem du schon mehrfach sämtliche Hoffnung verloren hast\n" +
                 "je wieder aus diesem Wald zu kommen, siehst du in der Ferne etwas aufleuchten.\n" +
-                "Als deine müden Augen erkennen um was es sich handelt trifft es dich wie ein Blitz.\n");
+                "Als deine müden Augen erkennen, um was es sich handelt, trifft es dich wie ein Blitz.\n");
             ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}: Ich werd verrückt... das sind die Scheinwerfer eines Autos. Und das bedeutet...\n" +
             "Noch bevor du deinen Gedanken beendest, läufst du so schnell dich deine müden Beine tragen in Richtung der Straße\n");
             ConsoleText.Continue();
             Console.WriteLine("Und tatsächlich. Du brichst durch die letzten Büsche und stehst auf einer Landstraße.\n" +
-                "Als du dich umsiehst erkennst du einige Gebäude wieder und weißt, seit einer Ewigkeit wieder, wo du dich befindest.\n" +
+                "Als du dich umsiehst erkennst du einige Gebäude und weißt, seit einer Ewigkeit wieder, wo du dich befindest.\n" +
                 "Es ist eine der Landstraßen die sich um deine Heimatstadt ziehen.\n" +
                 "Du möchtest am liebsten schnellstmöglich nach Hause und deine Eltern umarmen.\n" +
-                "Jedoch hällst du es für vernünftiger zuerst einen Arzt aufzusuchen.\n" +
+                "Jedoch hälst du es für vernünftiger zuerst einen Arzt aufzusuchen.\n" +
                 "Glücklicherweise weißt du, dass sich ein Arzt ganz in der Nähe befindet.\n");
             ConsoleText.Continue();
 

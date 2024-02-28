@@ -49,9 +49,9 @@ namespace Textadventure
                 Console.BackgroundColor = ConsoleColor.Green;
                 Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.WriteLine("Hinweis:Du legst eine Rast ein. Diese stellt 5 Healthpoints wieder her.\n" +
-                    "Der Energydrink stellt 10 Healthpoints wieder her.\n " +
-                    "Ob du ihn jetzt oder zu einem späteren Zeitpunkt nutzt bleibt dir überlassen\n" +
+                Console.WriteLine("Hinweis: Du legst eine Rast ein. Diese stellt 5 Healthpoints wieder her.\n" +
+                    "Der Energydrink stellt 10 Healthpoints wieder her.\n" +
+                    "Ob du ihn jetzt oder zu einem späteren Zeitpunkt nutzt bleibt dir überlassen.\n" +
                     "1 = Rasten (5HP)\n" +
                     "2 = Energydrink trinken (10HP)\n");
 
@@ -83,7 +83,8 @@ namespace Textadventure
 
                     isCorrectInput = true;
                 }
-
+                
+                
             }
         }
 
@@ -114,7 +115,7 @@ internal void Camp()
                 "Er schaut dich für ein paar Sekunden reglos an und beginnt danach sich aufzurichten.\n" +
                 "Dein Selbstvertrauen sinkt ins Bodenlose als du bemerkst,\n" +
                 "dass dieser Kerl mindestens 2 Meter groß und ebenso breit gebaut ist.\n" +
-                "Du kommst zu dem Entschluss, dass Gewalt als Lösung ungeeignet zu sein scheint\n" +
+                "Du kommst zu dem Entschluss, dass Gewalt als Lösung ungeeignet zu sein scheint.\n" +
                 "Du entscheidest dich ihn verbal zu konfrontieren.\n");
             ConsoleText.Continue();
             Console.WriteLine($"{_player.Name}: Bist du verantwortlich für das Massaker auf dem Hain?\n" +

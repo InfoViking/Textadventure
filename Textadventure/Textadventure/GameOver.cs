@@ -13,6 +13,8 @@ namespace Textadventure
     {
         internal static void GameOver(string deathReason)
         {
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine(deathReason);
 
 

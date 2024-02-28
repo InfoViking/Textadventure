@@ -99,7 +99,7 @@
 
                     continue;
                 }
-
+            
                 if (convertedChoice == 1)
                 {
                     Console.BackgroundColor = ConsoleColor.Red;
