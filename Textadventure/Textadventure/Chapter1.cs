@@ -110,12 +110,12 @@ namespace Textadventure
         }
 
         /// <summary>
-        /// possible choices 1
+        /// possible choices 
         /// </summary>
         internal void Leftway()
         {
             Console.WriteLine($"{_player.Name}: Diese Tierspuren sind mir nicht geheuer.\n" +
-                $"Ich lege mich lieber mit ein paar Dornen und Schlaglöchern an, als mit einer wilden Bestie.\n" +
+                "Ich lege mich lieber mit ein paar Dornen und Schlaglöchern an, als mit einer wilden Bestie.\n" +
                 "Du setzt deine Reise auf dem linken Pfad fort.\n");
             ConsoleText.Continue();
             Console.WriteLine("Und es kam wie es kommen musste. Nach einem Moment der Unachtsamkeit trittst du\n" +
@@ -139,7 +139,7 @@ namespace Textadventure
         internal void Rightway()
         {
             Console.WriteLine($"{_player.Name}: Die Chance mich auf dem linken Weg zu verletzen scheint recht hoch... \n" +
-                $"zwar jagt mir der Gedanke an das Tier Angst ein, jedoch komme ich auf dem rechten Pfad schneller vorwärts.\n" +
+                "zwar jagt mir der Gedanke an das Tier Angst ein, jedoch komme ich auf dem rechten Pfad schneller vorwärts.\n" +
                 "Du setzt deine Reise auf dem rechten Pfad fort\n");
             ConsoleText.Continue();
             Console.WriteLine("Während du den Weg beschreitest macht sich Paranoia in dir breit.\n" +

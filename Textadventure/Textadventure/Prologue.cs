@@ -45,6 +45,7 @@ namespace Textadventure
             Console.WriteLine("Alter: 18.");
             Console.WriteLine("Größe: 1,74m.");
             Console.WriteLine("Beruf: Schüler.");
+            Console.WriteLine("Gesundheit: 20 HP");
             ConsoleText.Continue();
         }
             
